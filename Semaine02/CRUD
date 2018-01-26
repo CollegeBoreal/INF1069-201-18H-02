@@ -1,2 +1,16 @@
 L'opération CRUD (Create Read Update Delete) dans MongoDB
 Dans ce cours, nous abordérons comment insérer, modifier et supprimer un document.
+1) Pour insérer un document dans mongo, on suit l'instruction suivante : 
+a) On se connecte a la base de donnees qu'on souhaite insérer les documents en utilisant la commande suivante : 
+ use nom_bd (nom de la base de donnees).
+b) Ensuite, on execute cette commande : 
+db.collection.insert(nom_du_document) 
+ou collection est le nom de la collection et nom_du_document est le document qu'on veut insérer dans la collection.
+Example : document={ "Nom": "Chris",
+                     "Prenom": "Beauchamps", 
+                     "Profession": "Footballeur",
+                     "Age":26 
+                     }
+db.collection.insert(document)
+Pour afficher le contenu du document, on tape la commande suivante :
+db.collection.find().pretty()
