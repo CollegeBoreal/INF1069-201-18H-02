@@ -1,16 +1,69 @@
 L'opération CRUD (Create Read Update Delete) dans MongoDB
 Dans ce cours, nous abordérons comment insérer, modifier et supprimer un document.
+
 1) Pour insérer un document dans mongo, on suit l'instruction suivante : 
-a) On se connecte a la base de donnees qu'on souhaite insérer les documents en utilisant la commande suivante : 
+
+a) On se connecte à la base de donnees qu'on souhaite insérer les documents en utilisant la commande suivante : 
  use nom_bd (nom de la base de donnees).
 b) Ensuite, on execute cette commande : 
 db.collection.insert(nom_du_document) 
-ou collection est le nom de la collection et nom_du_document est le document qu'on veut insérer dans la collection.
+où collection est le nom de la collection et nom_du_document est le document qu'on veut insérer dans la collection.
+
 Example : document={ "Nom": "Chris",
                      "Prenom": "Beauchamps", 
                      "Profession": "Footballeur",
                      "Age":26 
                      }
 db.collection.insert(document)
+
 Pour afficher le contenu du document, on tape la commande suivante :
+
+db.collection.find().pretty()
+
+On peut aussi insérer un document directement sans faire appel à une variable c'est-à-dire :
+
+db.collection.insert({ "Nom": "Chris",
+                     "Prenom": "Beauchamps", 
+                     "Profession": "Footballeur",
+                     "Age":26 
+                     })
+db.collection.find().pretty()
+
+On peut également insérer plusieurs documents à la fois en suivant l'instruction ci-dessous :
+document1={"Nom":"Blondy","Prénom":"Alpha","Album":"Rendez-vous"}
+document2={"Nom":"Marley","Prénom":"Bob","Status":"Mort","Album":"Live"}
+db.collection.insert([document1,document2]) 
+db.collection.insert([document1,document2],{ writeConcern: { w: "majority", wtimeout: 5000 }, ordered:true }) 
+ou insérer directement les contenus des documents 
+
+db.collection.insert([{"Nom":"Blondy","Prénom":"Alpha","Album":"Rendez-vous"},
+                     {"Nom":"Marley","Prénom":"Bob","Status":"Mort","Album":"Live"}])
+db.collection.find().pretty()
+
+2) Le schema suivant permet de modifier les documents d'une collection :
+
+db.collection.update(document_à_modifier, modifier, options) 
+où document_à_modifier est le nom du document à modifier, 
+modifier est la modification qu'on veut apporter au document et 
+options permet de spécifier les options les plus utilisées (upsert et multi)
+
+db.collection.drop()
+ document1 = {
+			"PatientId" : 1, 
+			"Hospital" : 'JGH', 
+			"Department" : 'Urology'
+		}
+ db.collection.insert(document1)
+ db.collection.find().pretty()
+
+db.collection.update(
+	{ 
+		PatientId: 1
+	},
+	{
+			"PatientId" : 1, 
+			"Hospital" : 'JGH', 
+			"Department" : 'Pharmacy'
+	}
+)
 db.collection.find().pretty()
