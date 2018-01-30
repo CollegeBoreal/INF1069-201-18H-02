@@ -50,9 +50,9 @@ db.collection.find().pretty()
 
 2) Le schema suivant permet de modifier les documents d'une collection :
 
-db.collection.update(document_à_modifier, modifier, options) 
+db.collection.update(requete, modifier, options) 
 
-où document_à_modifier est le nom du document à modifier, 
+où  est requete est le critere de selection des donnees pour la modification, 
 modifier est la modification qu'on veut apporter au document et 
 options permet de spécifier les options les plus utilisées (upsert et multi)
 upsert permet de creer un nouveau document lorsqu'il y a aucun document correspondant a la requete.
@@ -96,5 +96,6 @@ db.collection.update(
 )
 
 db.collection.find().pretty()
+
 
 
