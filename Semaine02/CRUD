@@ -97,5 +97,42 @@ db.collection.update(
 
 db.collection.find().pretty()
 
+3) Cette section permet de supprimer les documents et la collection
+
+db.collection.remove(critere, justOne)
+
+où critere designe les documents qu'on veut supprimer de la collection et 
+justOne (1 ou true) permet de supprimer un seul document correspondant au critere.
+
+ document1 = {
+			"PatientId" : 1, 
+			"Hospital" : 'JGH', 
+			"Department" : 'Urology'
+		}
+ db.collection.insert(document1)
+ db.collection.find().pretty()
+ 
+  document2 = {
+			"PatientId" : 2, 
+			"Hospital" : 'JGH', 
+			"Department" : 'Microbiology'
+		}
+ db.collection.insert(document2)
+ db.collection.find().pretty()
+
+db.collection.remove({PatientId : 1}, {justOne:true})
+db.collection.find().pretty()
+
+Pour supprimer tous les documents d'une collection : 
+
+db.collection.remove({})
+
+Cette commande permet de supprimer une collection :
+
+db.collection.drop()
+
+Enfin, pour supprimer une base de donnees, on tape la commande suivante : 
+
+db.dropDatabase()
 
 
