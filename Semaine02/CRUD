@@ -6,7 +6,7 @@ Dans ce cours, nous abordérons comment insérer, modifier et supprimer un docum
 
 a) On se connecte à la base de donnees qu'on souhaite insérer les documents en utilisant la commande suivante : 
 
- use nom_bd (nom de la base de donnees)
+ use nom_bd (nom_bd est le nom de la base de donnees qu'on veut se connecter)
  
 b) Ensuite, on execute cette commande : 
 
@@ -66,7 +66,29 @@ db.collection.drop()
 		}
  db.collection.insert(document1)
  db.collection.find().pretty()
+ 
+On peut aussi declarer une liste d'elements dans les champs d'un document : 
 
+document2 = {
+			"PatientId" : 1, 
+			"Hospital" : 'JGH', 
+			"Department" : 'Urology',
+			"City": ['Toronto', 'London','Kingston']
+		}
+ db.collection.insert(document2)
+ db.collection.find().pretty()
+ 
+ document2 = {
+			"PatientId" : 1, 
+			"Hospital" : 'JGH', 
+			"Department" : 'Urology',
+			"City": [ {"Toronto Population": 6000000},
+			{"GTA": ["Durham, Halton,Peel,York"]}
+			]
+		}
+ db.collection.insert(document2)
+ db.collection.find().pretty()
+ 
 db.collection.update(
 	{ 
 		PatientId: 1
@@ -96,6 +118,9 @@ db.collection.update(
 )
 
 db.collection.find().pretty()
+
+Les operateurs suivants inc, set, unset et addToSet permettent respectivement d'incrementer une valeur, de changer le contenu d'un champ, de supprimer un champ 
+et d'ajouter les donnees dans un tableau.
 
 3) Cette section permet de supprimer les documents et la collection
 
