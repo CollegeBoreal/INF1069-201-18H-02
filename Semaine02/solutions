@@ -21,4 +21,33 @@ Q8: mongoexport -db INF1069 --collection mycollection --out mycollection.bak.jso
 
 Q9:  db.mycollection.remove({})
 
-Q10: 
+Q10: mongoimport --port 27017 -db semaine02 -collection mycollection --drop --type json --file mycollection.json
+
+Q11: mongoimport --port 27017 -db semaine02 -c customer --drop --type csv --file customers.csv --headerline
+     mongoimport --port 27017 -db semaine02 -c product --drop --type csv --file products.csv --headerline
+     
+Q12: db.product.find().count()
+      db.product.update( {},
+                        {$set: { "OriginalCountry": "", "Description": ""}},
+                         {upsert: false, multi: true}
+                         )
+Q13: db.product.find({"CategoryID" : 2}).count()
+     db.product.update(
+    {"CategoryID" : 2},
+    {$inc: { UnitPrice: 5 }},
+    {upsert: false, multi: true}
+                        )    
+
+Q14: db.product.find({"SupplierID" : 2}).count()
+     db.product.find({"SupplierID" : 2}).pretty()
+     db.product.update({"SupplierID" : 2},
+     {$set: { OriginalCountry: "Canada" }},
+     {upsert: false, multi: true}
+                       )
+
+ db.product.find({"SupplierID" : 1}).count()
+ db.product.find({"SupplierID" : 1}).pretty()
+ db.product.update({"SupplierID" : 1},
+    {$set: { OriginalCountry: "USA" }},
+    {upsert: false, multi: true}
+                  )
