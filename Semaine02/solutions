@@ -13,4 +13,12 @@ Q5: db.mycollection.update({Username:"Pierre"},{$set:{"Hobbies.sports":["soccer"
 
 db.mycollection.update({Username:"Pierre"},{$addToSet:{"Hobbies.sports":"volleyball"}})
 
-Q6 : 
+Q6 : db.mycollection.update({Country:"Australia"},{$set:{sports:"Baseball"}})
+
+Q7 : db.mycollection.update({Username:"Pierre"},{$unset:{"Hobbies.voyages":1}})
+
+Q8: mongoexport -db INF1069 --collection mycollection --out mycollection.bak.json
+
+Q9:  db.mycollection.remove({})
+
+Q10: 
