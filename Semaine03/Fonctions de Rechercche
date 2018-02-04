@@ -1,0 +1,2 @@
+La fonction find() permet de rechercher et afficher les documents d'une collection.
+db.departments.find()  -> affiche tous les déparments de la collection departments.
