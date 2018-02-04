@@ -14,14 +14,14 @@ Q7 : Supprimer tous les voyages de Pierre
 
 Q8 : Exporter la collection 
 
-Q8 : Supprimer tous les documents sans supprimer la collection
+Q9 : Supprimer tous les documents sans supprimer la collection
 
-Q9 : Importer la collection 
+Q10 : Importer la collection 
 
-Q10: Importer les collections customer et product. Notez combien de documents sont été modifiés pour chacune des requêtes suivantes.
+Q11: Importer les collections customer et product. Notez combien de documents sont été modifiés pour chacune des requêtes suivantes.
 
-Q11: Ajouter les champs pays d'origine et description pour tous les produits.
+Q12: Ajouter les champs pays d'origine et description pour tous les produits.
 
-Q12:Incrémenter le prix unitaire de 5 pour tous les produits de categorie 2.
+Q13:Incrémenter le prix unitaire de 5 pour tous les produits de categorie 2.
 
-Q13:Modifier le pays d'origine pour les produits pour tous les fournisseurs de type 2, pour Canada et de type 1 pour USA.
+Q14:Modifier le pays d'origine pour les produits pour tous les fournisseurs de type 2, pour Canada et de type 1 pour USA.
