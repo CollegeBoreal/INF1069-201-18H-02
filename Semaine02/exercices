@@ -8,7 +8,7 @@ Q4 : Enlever l'âge de Pierre de la collection.
 
 Q5 : Ajouter aux sports de Pierre le Volleyball
 
-Q6 : Ajouter le Baseball à tous les documents comme sport
+Q6 : Ajouter le Baseball comme sport à tous les utilisateurs dont le pays est Australia.
 
 Q7 : Supprimer tous les voyages de Pierre
 
