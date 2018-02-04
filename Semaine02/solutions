@@ -1,1 +1,16 @@
-Q1: db.mycollection.insert({})
+Q1: db.mycollection.insert({Username:"Paul",Country:"Australia", Education:"Master's degree"})
+
+Q2 : db.mycollection.update({Username:"Paul"},{$set:{age:20}})
+
+Q3 : db.mycollection.insert({Username:"Pierre", age:22, 
+                              Country:"Canada", 
+                              Hobbies:{ sports :["soccer","basketball"],
+                                        voyages :["Paris","New yor city"]}
+                              })
+Q4 : db.mycollection.update({Username:"Pierre"},{$unset:{age:1}})
+
+Q5: db.mycollection.update({Username:"Pierre"},{$set:{"Hobbies.sports":["soccer","basketball","volleyball"]}}) ouencore
+
+db.mycollection.update({Username:"Pierre"},{$addToSet:{"Hobbies.sports":"volleyball"}})
+
+Q6 : 
