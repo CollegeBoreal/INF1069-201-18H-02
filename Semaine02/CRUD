@@ -55,8 +55,8 @@ db.collection.update(requete, modifier, options)
 où  est requete est le critere de selection des donnees pour la modification, 
 modifier est la modification qu'on veut apporter au document et 
 options permet de spécifier les options les plus utilisées (upsert et multi)
-upsert permet de creer un nouveau document lorsqu'il y a aucun document correspondant a la requete.
-multi met a jour plusieurs documents lorsque sa valeur est true. Par defaut, sa valeur est false et met a jour un seul document.
+upsert permet de créer un nouveau document lorsqu'il y a aucun document correspondant à la requete.
+multi met à jour plusieurs documents lorsque sa valeur est true. Par defaut, sa valeur est false et met à jour un seul document.
 
 db.collection.drop()
  document1 = {
@@ -67,7 +67,7 @@ db.collection.drop()
  db.collection.insert(document1)
  db.collection.find().pretty()
  
-On peut aussi declarer une liste d'elements dans les champs d'un document : 
+On peut aussi déclarer une liste d'éléments dans les champs d'un document : 
 
 document2 = {
 			"PatientId" : 1, 
@@ -119,15 +119,15 @@ db.collection.update(
 
 db.collection.find().pretty()
 
-Les operateurs suivants inc, set, unset et addToSet permettent respectivement d'incrementer une valeur, de changer le contenu d'un champ, de supprimer un champ 
-et d'ajouter les donnees dans un tableau.
+Les opérateurs suivants inc, set, unset et addToSet permettent respectivement d'incrémenter une valeur, de changer le contenu d'un champ, de supprimer un champ 
+et d'ajouter les données dans un tableau.
 
 3) Cette section permet de supprimer les documents et la collection
 
 db.collection.remove(critere, justOne)
 
-où critere designe les documents qu'on veut supprimer de la collection et 
-justOne (1 ou true) permet de supprimer un seul document correspondant au critere.
+où critere désigne les documents qu'on veut supprimer de la collection et 
+justOne (1 ou true) permet de supprimer un seul document correspondant au critère.
 
  document1 = {
 			"PatientId" : 1, 
