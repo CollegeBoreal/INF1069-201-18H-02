@@ -1,0 +1,1 @@
+Q1: db.mycollection.insert({})
