@@ -38,4 +38,15 @@ db.states.find({"info.capital":"Mumbai"})
 
 Quelques operateurs de comparaison 
 
-NOT EQUAL ($ne), like ou $regrex , less than ($lt), ess than or equal ($ltr), greater than ($gt), greater than or equal ($gte).
+NOT EQUAL ($ne), like ou $regrex , less than ($lt), ess than or equal ($lte), greater than ($gt), greater than or equal ($gte).
+
+La syntaxe pour utiliser les operateurs ci-dessus est la suivante :  
+
+{champ:{$operateur:valeur}} 
+
+Examples : Afficher tous les hommes (male) de la collection titanic 
+
+db.titanic.find({sex:{$ne:"female"}})
+
+
+
