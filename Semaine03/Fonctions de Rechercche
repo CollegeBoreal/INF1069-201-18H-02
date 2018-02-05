@@ -4,9 +4,38 @@ db.departments.find()  -> affiche tous les déparments de la collection departme
 
 https://docs.mongodb.com/manual/reference/method/db.collection.find/
 
-Cette commande retourne tous les documents ayant le champ male dans la collection titanic : 
+Pour plus de pratique, importons les fichiers csv (titanic, IndiaCitiesPopulation) et json (IndiaStates) dans mongo :
 
-db.titanic.find({"male"})
+mongoimport --port 27017 -d semaine03 -c titanic --drop --type csv --file titanic.csv --headerline
+mongoimport --port 27017 -d semaine03 -c cities --drop --type csv --file IndiaCitiesPopulation.csv --headerline
+mongoimport --port 27017 -d semaine03 -c states --drop --type json --file IndiaStates.json
 
+Pour rechercher et afficher tous les documents de la collection titanic : 
 
+db.titanic.find().pretty()
 
+On peut aussi restreindre la recherche aux documents ayant le champ male dans la collection titanic : 
+
+db.titanic.find({sex: "male"})
+
+Restreindre les champs dans la selection des donnees
+
+ Cette commande permet d'afficher tous les documents avec seulement les champs name, sex et le champ _id de la collection titanic 
+ 
+ db.titanic.find({}, {name:1, sex:1}) 
+
+Pour ne pas afficher le champ identifiant (_id), on fait : 
+
+db.titanic.find({}, {name:1, sex:1,_id:0}) 
+
+Pour acceder aux champs imbriques, aussi appeles nested en anglais, on procede comme suit : 
+
+db.collection.find({"nom_du_champ.element_du_champ":"une valeur de l'element du champ"})
+
+où nom_du_champ est le champ qu'on souhaite extraire des informations et element du champ est un tableau (array) a plusieurs valeurs.
+
+db.states.find({"info.capital":"Mumbai"})
+
+Quelques operateurs de comparaison 
+
+NOT EQUAL ($ne), like ou $regrex , less than ($lt), ess than or equal ($ltr), greater than ($gt), greater than or equal ($gte).
