@@ -9,7 +9,7 @@ Q3 : db.mycollection.insert({Username:"Pierre", age:22,
                               })
 Q4 : db.mycollection.update({Username:"Pierre"},{$unset:{age:1}})
 
-Q5: db.mycollection.update({Username:"Pierre"},{$set:{"Hobbies.sports":["soccer","basketball","volleyball"]}}) ouencore
+Q5: db.mycollection.update({Username:"Pierre"},{$set:{"Hobbies.sports":["soccer","basketball","volleyball"]}}) ou encore
 
 db.mycollection.update({Username:"Pierre"},{$addToSet:{"Hobbies.sports":"volleyball"}})
 
