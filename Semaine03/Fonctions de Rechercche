@@ -38,7 +38,7 @@ db.states.find({"info.capital":"Mumbai"})
 
 Quelques operateurs de comparaison 
 
-NOT EQUAL ($ne), like ou $regrex , less than ($lt), ess than or equal ($lte), greater than ($gt), greater than or equal ($gte).
+NOT EQUAL ($ne), like ($regrex) , less than ($lt), ess than or equal ($lte), greater than ($gt), greater than or equal ($gte).
 
 La syntaxe pour utiliser les operateurs ci-dessus est la suivante :  
 
@@ -48,5 +48,19 @@ Examples : Afficher tous les hommes (male) de la collection titanic
 
 db.titanic.find({sex:{$ne:"female"}})
 
+Avec like : 
 
+db.titanic.find({"home.dest":/Montreal/i})
+db.titatinac.find({"home.dest":{$regex:/Montreal/i}})
+
+La fonction sort() permet de trier les données par ordre croissant en spécifiant le paramètre 1, et -1 par ordre décroissant.
+
+db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1})
+
+Les fonctions limit() et skip() permettent respectivement de limiter l'affichage des documents de la collection à un nombre spécifié 
+et de sauter sur un certain nombre de documents avant d'afficher la collection.
+
+db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).limit(5)
+db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).skip(10)
+db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).skip(5).limit(10)
 
