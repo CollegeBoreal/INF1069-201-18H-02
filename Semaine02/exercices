@@ -18,7 +18,9 @@ Q9 : Supprimer tous les documents sans supprimer la collection
 
 Q10 : Importer la collection 
 
-Q11: Importer les collections customer et product. Notez combien de documents sont été modifiés pour chacune des requêtes suivantes.
+Q11: Importer les collections customer et product.
+
+Combien de documents ont été modifiés pour chacune des requêtes suivantes:
 
 Q12: Ajouter les champs pays d'origine et description pour tous les produits.
 
