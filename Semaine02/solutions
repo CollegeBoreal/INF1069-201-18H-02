@@ -21,10 +21,10 @@ Q8: mongoexport -db INF1069 --collection mycollection --out mycollection.bak.jso
 
 Q9:  db.mycollection.remove({})
 
-Q10: mongoimport --port 27017 -db semaine02 -collection mycollection --drop --type json --file mycollection.json
+Q10: mongoimport --port 27017 --db semaine02 -collection mycollection --drop --type json --file mycollection.json
 
-Q11: mongoimport --port 27017 -db semaine02 -c customer --drop --type csv --file customers.csv --headerline
-     mongoimport --port 27017 -db semaine02 -c product --drop --type csv --file products.csv --headerline
+Q11: mongoimport --port 27017 --db semaine02 -c customer --drop --type csv --file customers.csv --headerline
+     mongoimport --port 27017 --db semaine02 -c product --drop --type csv --file products.csv --headerline
      
 Q12: db.product.find().count()
       db.product.update( {},
