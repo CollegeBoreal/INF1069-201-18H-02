@@ -65,3 +65,10 @@ db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).skip(10)
 db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).skip(5).limit(10)
 
 Les opérateurs : include ($in), not include ($nin), all($all) and exclude ($not)
+
+db.titanic.find({name:{$in:["Bazzani", "Blank", /Allison/]}}).pretty()
+db.titanic.find({name:{$nin:["Bishop", "Bonnell"]}}).count()
+db.titanic.find({embarked :{$all:["S", "C"]}}).count()
+db.titanic.find({sex :{$not:["male", "female"]}}).count()
+
+
