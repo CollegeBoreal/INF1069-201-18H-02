@@ -64,3 +64,4 @@ db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).limit(5)
 db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).skip(10)
 db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).skip(5).limit(10)
 
+Les opérateurs : include ($in), not include ($nin), all($all) and exclude ($not)
