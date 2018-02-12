@@ -67,8 +67,50 @@ db.titanic.find({}, {name:1, sex:1}).sort({name:1,sex:-1}).skip(5).limit(10)
 Les opérateurs : include ($in), not include ($nin), all($all) and exclude ($not)
 
 db.titanic.find({name:{$in:["Bazzani", "Blank", /Allison/]}}).pretty()
-db.titanic.find({name:{$nin:["Bishop", "Bonnell"]}}).count()
-db.titanic.find({embarked :{$all:["S", "C"]}}).count()
-db.titanic.find({sex :{$not:["male", "female"]}}).count()
+db.titanic.find({sex:{$nin:["male", "female"]}}).count()
+db.titanic.find({embarked :{$all:["S"]}}).count()
+db.titanic.find({age :{$not:{$gt:25}}}).count()
+
+La commande $exists permet de vérifier la présence d'un champ.
+
+db.titanic.find({embarked:{$exists:false}}).pretty()
+
+Quelques opérateurs logiques avec la fonction recherche ($and), ($or) et ($nor)
+
+db.titanic.find({$and:[{sex:"male", embarked:"S"}]}).count()
+db.cities.find({$or:[{state:"BIHAR"}, {state:"HARIYANA"}]})
+db.cities.find({$or:[{state:"GUJARAT"}, {state:"HARIYANA"}]})
+
+Les fonctions findOne() and findAndModify
+
+La fonction findOne() retourne qu'un seul document selon le critère spécifié en arguments.
+La syntaxe est la suivante : 
+db.titanic.findOne({sex:"female"})
+
+La fonction findAndModify permet de modifier et retourner un seul document 
+
+db.collection.findAndModify({
+    query: <document>,
+    sort: <document>,
+    remove: <boolean>,
+    update: <document>,
+    new: <boolean>,
+    fields: <document>,
+    upsert: <boolean>,
+})
+
+La commande suivante modifie le champ fare, l'incremente de 100 et retourne le premier document trié par ordre croissant :
+
+db.titanic.findAndModify({
+	query: {sex: "male"},
+	sort: {name : 1},
+	update: {$inc: {fare: 100}},
+	upsert :true,
+	new: true,
+ fields:{pclass:1,survived:1,name,1,sex:1,age;1,fare:1}
+})
+
+
+
 
 
