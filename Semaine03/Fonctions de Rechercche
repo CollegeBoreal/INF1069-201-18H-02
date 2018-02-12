@@ -1,4 +1,4 @@
-La fonction find() permet de rechercher et afficher les documents d'une collection.
+La fonction find() permet de rechercher et afficher les documents d'une collection.   (Markdown for M)
 
 db.departments.find()  -> affiche tous les déparments de la collection departments.
 
@@ -79,7 +79,7 @@ Quelques opérateurs logiques avec la fonction recherche ($and), ($or) et ($nor)
 
 db.titanic.find({$and:[{sex:"male", embarked:"S"}]}).count()
 db.cities.find({$or:[{state:"BIHAR"}, {state:"HARIYANA"}]})
-db.cities.find({$or:[{state:"GUJARAT"}, {state:"HARIYANA"}]})
+db.cities.find({$nor:[{state:"GUJARAT"}, {state:"HARIYANA"}]})
 
 Les fonctions findOne() and findAndModify
 
