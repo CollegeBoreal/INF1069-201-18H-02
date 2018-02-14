@@ -4,5 +4,5 @@
 
 
 ```
-mongodb> db.collections
+ db.collection.find()
 ```
