@@ -2,7 +2,7 @@ L'opération CRUD (Create Read Update Delete) dans MongoDB
 
 Dans ce cours, nous abordérons comment insérer, modifier et supprimer un document.
 
-1) Pour insérer un document dans mongo, on suit l'instruction suivante : 
+### 1) Pour insérer un document dans mongo, on suit l'instruction suivante : ###
 
 a) On se connecte à la base de donnees qu'on souhaite insérer les documents en utilisant la commande suivante : 
 
@@ -49,7 +49,7 @@ db.collection.insert([{"Nom":"Blondy","Prénom":"Alpha","Album":"Rendez-vous"},
                      {"Nom":"Marley","Prénom":"Bob","Status":"Mort","Album":"Live"}])
 db.collection.find().pretty()
 ```
-2) Le schema suivant permet de modifier les documents d'une collection :
+### 2) Le schema suivant permet de modifier les documents d'une collection :###
 ```
 db.collection.update(requete, modifier, options) 
 ```
@@ -125,7 +125,7 @@ db.collection.find().pretty()
 Les opérateurs suivants inc, set, unset et addToSet permettent respectivement d'incrémenter une valeur, de changer le contenu d'un champ, de supprimer un champ 
 et d'ajouter les données dans un tableau.
 
-3) Cette section permet de supprimer les documents et la collection
+### 3) Cette section permet de supprimer les documents et la collection ###
 ```
 db.collection.remove(critere, justOne)
 ```
