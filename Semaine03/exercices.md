@@ -1,4 +1,4 @@
-Les exercices de la semaine 03
+### Les exercices de la semaine 03 ###
 
 Question 1 : Combien y a-t-il de livres de catégories Internet et de catégories non Internet.
 Question 2 : Quels sont les 3 derniers livres enregistrés.
