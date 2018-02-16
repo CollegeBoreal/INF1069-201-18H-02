@@ -5,5 +5,6 @@ d'analyser les données. MongoDB propose trois méthodes pour utiliser le framew
  1) le pipeline d'agrégation
  2) le MapReduce
  3) les fonctions dédiées
+ 
 https://docs.mongodb.com/manual/reference/method/db.collection.group/
 
