@@ -4,10 +4,11 @@
                db.books.find({"categories":{$ne:"Internet"}}).count() ```
              
 **Question 2 :** 
-``` var nbCount = db.books.find({}).count()
+           ``` var nbCount = db.books.find({}).count()
              db.books.find({}).skip(nbCount-3) ```
              
-**Question 3 :**  db.books.find({"publishedDate": {$lt: ISODate("2010-01-01")}}).pretty()
+**Question 3 :** 
+           ``` db.books.find({"publishedDate": {$lt: ISODate("2010-01-01")}}).pretty() ```
 
 **Question 4 :**  db.books.find({publishedDate:{$exists:true}},{"_id":0, "title":1, "isbn":1, "authors":1}).sort({"_id":1}).limit(5).pretty()
 
