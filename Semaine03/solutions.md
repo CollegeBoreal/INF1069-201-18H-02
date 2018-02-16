@@ -1,5 +1,6 @@
 
-** Question 1 :**  db.books.find({"categories":"Internet"}).count()
+** Question 1 : ** 
+              db.books.find({"categories":"Internet"}).count()
              db.books.find({"categories":{$ne:"Internet"}}).count()
              
 ** Question 2 :**  var nbCount = db.books.find({}).count()
