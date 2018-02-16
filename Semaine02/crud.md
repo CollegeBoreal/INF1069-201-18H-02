@@ -49,7 +49,7 @@ db.collection.insert([{"Nom":"Blondy","Prénom":"Alpha","Album":"Rendez-vous"},
                      {"Nom":"Marley","Prénom":"Bob","Status":"Mort","Album":"Live"}])
 db.collection.find().pretty()
 ```
-### 2) Le schema suivant permet de modifier les documents d'une collection :###
+### 2) Le schema suivant permet de modifier les documents d'une collection : ###
 ```
 db.collection.update(requete, modifier, options) 
 ```
