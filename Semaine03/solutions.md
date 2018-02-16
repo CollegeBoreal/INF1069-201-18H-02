@@ -1,12 +1,10 @@
 
 **Question 1 :** 
-``` 
-            db.books.find({"categories":"Internet"}).count()
-               db.books.find({"categories":{$ne:"Internet"}}).count() ```
+``` db.books.find({"categories":"Internet"}).count()
+    db.books.find({"categories":{$ne:"Internet"}}).count() ```
              
 **Question 2 :** 
-``` 
-           var nbCount = db.books.find({}).count()
+``` var nbCount = db.books.find({}).count()
              db.books.find({}).skip(nbCount-3) ```
              
 **Question 3 :** 
