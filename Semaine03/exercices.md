@@ -10,6 +10,6 @@ Question 6 : Une application affiche tous les livres en order croissant selon le
              Quels sont les livres à la page 4, si on affiche 5 par pages.
 Question 7 : Combien de livres y a-t-il dont la catégorie est Networking ou qui n'ont pas été publiés.
 
-[solutions]()
+[solutions](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine03/solutions)
 
 
