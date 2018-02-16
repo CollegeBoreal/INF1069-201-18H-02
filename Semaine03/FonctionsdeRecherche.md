@@ -43,7 +43,7 @@ où nom_du_champ est le champ qu'on souhaite extraire des informations et elemen
 db.states.find({"info.capital":"Mumbai"})
 ```
 
-Quelques operateurs de comparaison 
+# Quelques operateurs de comparaison #
 
 NOT EQUAL ($ne), like ($regrex) , less than ($lt), ess than or equal ($lte), greater than ($gt), greater than or equal ($gte).
 
@@ -83,8 +83,9 @@ db.titanic.find({embarked :{$all:["S"]}}).count()
 db.titanic.find({age :{$not:{$gt:25}}}).count()
 ```
 La commande $exists permet de vérifier la présence d'un champ.
-
+```
 db.titanic.find({embarked:{$exists:false}}).pretty()
+```
 
 Quelques opérateurs logiques avec la fonction recherche ($and), ($or) et ($nor)
 ```
@@ -92,7 +93,7 @@ db.titanic.find({$and:[{sex:"male", embarked:"S"}]}).count()
 db.cities.find({$or:[{state:"BIHAR"}, {state:"HARIYANA"}]})
 db.cities.find({$nor:[{state:"GUJARAT"}, {state:"HARIYANA"}]})
 ```
-Les fonctions findOne() and findAndModify
+# Les fonctions findOne() and findAndModify #
 
 La fonction findOne() retourne qu'un seul document selon le critère spécifié en arguments.
 La syntaxe est la suivante : 
