@@ -1,6 +1,6 @@
 ### Les exercices de la semaine 03 ###
 
-Question 1 : Combien y a-t-il de livres de catégories Internet et de catégories non Internet.
+** Question 1 :  Combien y a-t-il de livres de catégories Internet et de catégories non Internet.
 Question 2 : Quels sont les 3 derniers livres enregistrés.
 Question 3 : Quels sont les livres qui ont été publiés avant le 1er janvier 2010.
 Question 4 : Afficher le titre, le isbn et les auteurs des 5 premiers livres triés en order croissant de _id qui ont 
