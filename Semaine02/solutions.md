@@ -21,7 +21,8 @@ db.mycollection.update({Username:"Pierre"},{$unset:{age:1}})
 Q5: 
 ```
 db.mycollection.update({Username:"Pierre"},{$set:{"Hobbies.sports":["soccer","basketball","volleyball"]}})
-``` ou encore
+``` 
+ou encore
 
 ```
 db.mycollection.update({Username:"Pierre"},{$addToSet:{"Hobbies.sports":"volleyball"}})
