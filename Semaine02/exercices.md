@@ -24,8 +24,8 @@ Combien de documents ont été modifiés pour chacune des requêtes suivantes:
 
 Q12: Ajouter les champs pays d'origine et description pour tous les produits.
 
-Q13:Incrémenter le prix unitaire de 5 pour tous les produits de categorie 2.
+Q13: Incrémenter le prix unitaire de 5 pour tous les produits de categorie 2.
 
-Q14:Modifier le pays d'origine pour les produits provenanrt des fournisseurs de type 2 pour le Canada, et de type 1 pour les USA.
+Q14: Modifier le pays d'origine pour les produits provenanrt des fournisseurs de type 2 pour le Canada, et de type 1 pour les USA.
 
 [solutions](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine02/solutions.md)
