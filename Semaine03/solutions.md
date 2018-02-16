@@ -36,3 +36,4 @@ db.books.find({}).sort({"_id":1}).skip(20).limit(5).pretty()
 
 [exercices](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine03/exercices.md)
 
+
