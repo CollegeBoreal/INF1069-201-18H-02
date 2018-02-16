@@ -12,9 +12,13 @@
 
 **Question 4 :**  
             ```
-            db.books.find({publishedDate:{$exists:true}},{"_id":0, "title":1, "isbn":1, "authors":1}).sort({"_id":1}).limit(5).pretty()                ```
+            db.books.find({publishedDate:{$exists:true}},{"_id":0, "title":1, "isbn":1, "authors":1}).sort({"_id":1}).limit(5).pretty()               
+            ```
 
-**Question 5 :**  db.books.find({status : {$ne:"PUBLISH"}}).count()
+**Question 5 :**  
+                 ``` 
+                      db.books.find({status : {$ne:"PUBLISH"}}).count()
+                                                                         ```
 
 **Question 6 :**  db.books.find({}).sort({"_id":1}).skip(20).limit(5).pretty()
 
