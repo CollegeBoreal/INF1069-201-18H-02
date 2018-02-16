@@ -9,3 +9,5 @@ Question 5 : Combien de livres n'ont pas été publiés (status).
 Question 6 : Une application affiche tous les livres en order croissant selon le _id. 
              Quels sont les livres à la page 4, si on affiche 5 par pages.
 Question 7 : Combien de livres y a-t-il dont la catégorie est Networking ou qui n'ont pas été publiés.
+
+
