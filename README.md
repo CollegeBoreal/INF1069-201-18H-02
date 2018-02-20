@@ -3,6 +3,3 @@
 ## Cours MongoDB
 
 
-```
- db.collection.find()
-```
