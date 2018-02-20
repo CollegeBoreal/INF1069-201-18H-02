@@ -5,10 +5,14 @@ d'analyser les données. MongoDB propose trois méthodes pour utiliser le framew
 
 ***1) le pipeline d'agrégation***
 
-Le pipeline d'agrégation est un framework permettanrt d'enchainer des actions transformer et traiter des requêtes spécifiques.
+Le pipeline d'agrégation est un framework permettant d'enchainer des actions pour transformer et traiter des requêtes spécifiques.
 ```
 db.collection.aggregate({pipeline document})
 ```
+$group
+
+L'opération $group permet de grouper les documents dans une collection selon certains critères spécifiques et d'effectuer quelques opérations d'agrégation telles que le comptage, la sommation, etc...
+
 https://docs.mongodb.com/manual/aggregation/
 
  ***2) les fonctions dédiées :***
