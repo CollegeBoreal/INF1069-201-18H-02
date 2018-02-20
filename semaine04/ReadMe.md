@@ -9,7 +9,7 @@ Le pipeline d'agrégation est un framework permettant d'enchainer des actions po
 ```
 db.collection.aggregate({pipeline document})
 ```
-$group
+***$group***
 
 L'opération $group permet de grouper les documents dans une collection selon certains critères spécifiques et d'effectuer quelques opérations d'agrégation telles que le comptage, la sommation, etc...
 
@@ -21,7 +21,7 @@ Pour compter le nombre de personnes dans chaque document regroupé selon le lieu
 ```
 db.titanic.aggregate({$group:{_id:"$embarked",count:{$sum:1}}}).pretty()
 ```
-$match
+***$match***
 L'opération $match filtre les documents correspondant aux critères de recherche.
 Example : on veut regrouper tous les documents dont l'age est superieur a 17 selon le lieu d'embarquement et le sexe.
 ```
@@ -31,7 +31,7 @@ db.titanic.aggregate(
     { $group : { _id : { sexe: "$sex", embarked: "$embarked"} , count : { $sum: 1 } } }
   ]).pretty()
   ```
-$limit 
+***$limit*** 
 
 Quant a l'operation $limit, elle permet de limiter le nombre de documents a afficher.
 ```
@@ -43,7 +43,7 @@ db.titanic.aggregate(
   ]).pretty()
   ```
   
-  $skip
+  ***$skip***
   
 L'operation $skip saute le nombre de documents specifie .
 ```
@@ -55,7 +55,7 @@ db.titanic.aggregate(
   ]).pretty()
   ```
   
- $sort
+ ***$sort***
  
   Permet de trier les documents par ordre croissant en specifiant 1 devant le champ qu'on veut trier et -1 par ordre décroissant.
   
