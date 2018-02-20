@@ -131,7 +131,7 @@ Cette autre commande retourne le nombre de personnes selon le lieu d'embarquemen
 
  ***3)  le MapReduce*** sera expliqué et détaillé dans l'une des prochaines séances
  
-
-
+ 
+ [exercices]()
 
 
