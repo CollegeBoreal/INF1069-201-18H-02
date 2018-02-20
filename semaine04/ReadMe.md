@@ -5,6 +5,8 @@ d'analyser les données. MongoDB propose trois méthodes pour utiliser le framew
 
 ***1) le pipeline d'agrégation***
 
+
+
 https://docs.mongodb.com/manual/aggregation/
 
  ***2) les fonctions dédiées :***
@@ -25,17 +27,29 @@ https://docs.mongodb.com/manual/aggregation/
  ```
  db.collection.group({ key, reduce, initial [, keyf] [, cond] [, finalize] })
  ```
- Cette commande compte le nombre de livres par status :
+ Cette commande compte le nombre de personnes selon le lieu d'embarquement:
   ```
- db.books.group ({
-    key: {status : true},
+ db.titanic.group ({
+    key: {embarked : 1},
     initial: {total : 0},
     reduce :  function (items,prev) {
                 prev.total += 1
               }
 })
 ```
- 
+
+Cette autre commande retourne le nombre de personnes selon le lieu d'embarquement (ici "S") et le sexe :
+
+  ```
+ db.titanic.group ({
+    key: {embarked : 1,sex:1},
+    cond :{embarked :"S"},
+    initial: {total : 0},
+    reduce :  function (items,prev) {
+                prev.total += 1
+              }
+})
+``` 
  https://docs.mongodb.com/manual/reference/method/db.collection.group/
 
  ***3)  le MapReduce*** sera expliqué et détaillé dans les prochaines séances
