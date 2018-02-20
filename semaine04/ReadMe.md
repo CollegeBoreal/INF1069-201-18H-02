@@ -3,7 +3,9 @@
 MongDB propose un framework d'agrégation permettant de recueillir l'information souhaitée. Celui-ci permet aussi de manipuler et 
 d'analyser les données. MongoDB propose trois méthodes pour utiliser le framework d'agrégation :
 ***1) le pipeline d'agrégation***
+
  ***2) les fonctions dédiées :***
+ 
  Les fonctions dédiées aussi appelées opérations d'agregation regroupent des documents d'une collection selon l'opération spécifiée.
  ```
  db.collection.count() retourne le nombre de documents selon le critère défini
