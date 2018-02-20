@@ -9,6 +9,8 @@ Le pipeline d'agrégation est un framework permettant d'enchainer des actions po
 ```
 db.collection.aggregate({pipeline document})
 ```
+https://docs.mongodb.com/manual/aggregation/
+
 ***$group***
 
 L'opération $group permet de grouper les documents dans une collection selon certains critères spécifiques et d'effectuer quelques opérations d'agrégation telles que le comptage, la sommation, etc...
@@ -77,12 +79,12 @@ db.titanic.aggregate(
 db.titanic.aggregate( [ { $projet : {_id:0,name:1,age:1} },{$limit:10}]).pretty()
  ```
 ***$unwind***
+
 produit pour chaque element du tableau un nouveau document.
 
 ```
 db.titanic.aggregate({ $unwind : "$embarked" }).pretty()
 ```
-https://docs.mongodb.com/manual/aggregation/
 
  ***2) les fonctions dédiées :***
  
