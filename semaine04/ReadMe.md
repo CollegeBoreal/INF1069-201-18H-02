@@ -5,6 +5,8 @@ d'analyser les données. MongoDB propose trois méthodes pour utiliser le framew
 
 ***1) le pipeline d'agrégation***
 
+https://docs.mongodb.com/manual/aggregation/
+
  ***2) les fonctions dédiées :***
  
  Les fonctions dédiées aussi appelées opérations d'agregation regroupent des documents d'une collection selon l'opération spécifiée.
