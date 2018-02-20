@@ -69,6 +69,13 @@ db.titanic.aggregate(
     {$limit:10}
   ]).pretty()
   ```
+  ***$projet***
+  
+  Permet de specifier les champs qu'on souhaite afficher. 
+    ```
+db.titanic.aggregate( [ { $projet : {_id:0,name:1,age:1} },{$limit:10}]).pretty()
+  ```
+***$unwind***
 
 https://docs.mongodb.com/manual/aggregation/
 
