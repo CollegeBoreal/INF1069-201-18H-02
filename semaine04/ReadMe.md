@@ -21,6 +21,53 @@ Pour compter le nombre de personnes dans chaque document regroupé selon le lieu
 ```
 db.titanic.aggregate({$group:{_id:"$embarked",count:{$sum:1}}}).pretty()
 ```
+$match
+L'opération $match filtre les documents correspondant aux critères de recherche.
+Example : on veut regrouper tous les documents dont l'age est superieur a 17 selon le lieu d'embarquement et le sexe.
+```
+db.titanic.aggregate(
+  [
+    { $match : { age : { $gt : 17 } } },
+    { $group : { _id : { sexe: "$sex", embarked: "$embarked"} , count : { $sum: 1 } } }
+  ]).pretty()
+  ```
+$limit 
+
+Quant a l'operation $limit, elle permet de limiter le nombre de documents a afficher.
+```
+db.titanic.aggregate(
+  [
+    { $match : { age : { $gt : 17 } } },
+    { $group : { _id : { sexe: "$sex", embarked: "$embarked"} , count : { $sum: 1 } } },
+    {$limit:10}
+  ]).pretty()
+  ```
+  
+  $skip
+  
+L'operation $skip saute le nombre de documents specifie .
+```
+db.titanic.aggregate(
+  [
+    { $match : { age : { $gt : 17 } } },
+    { $group : { _id : { sexe: "$sex", embarked: "$embarked"} , count : { $sum: 1 } } },
+    {$skip:10}
+  ]).pretty()
+  ```
+  
+ $sort
+ 
+  Permet de trier les documents par ordre croissant en specifiant 1 devant le champ qu'on veut trier et -1 par ordre décroissant.
+  
+  ```
+db.titanic.aggregate(
+  [
+    { $match : { age : { $gt : 17 } } },
+    { $group : { _id : { sexe: "$sex", embarked: "$embarked"} , count : { $sum: 1 } } },
+    {$sort:{_id:1}},
+    {$limit:10}
+  ]).pretty()
+  ```
 
 https://docs.mongodb.com/manual/aggregation/
 
@@ -67,7 +114,7 @@ Cette autre commande retourne le nombre de personnes selon le lieu d'embarquemen
 ``` 
  https://docs.mongodb.com/manual/reference/method/db.collection.group/
 
- ***3)  le MapReduce*** sera expliqué et détaillé dans les prochaines séances
+ ***3)  le MapReduce*** sera expliqué et détaillé dans l'une des prochaines séances
  
 
 
