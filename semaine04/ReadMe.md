@@ -19,7 +19,20 @@ d'analyser les données. MongoDB propose trois méthodes pour utiliser le framew
  ```
  db.books.distinct('categories', {"status" : "PUBLISH"})
  ```
- 
+ Pour regouper les documents selon un ou plusieurs critères, on utilise la fonction group() : 
+ ```
+ db.collection.group({ key, reduce, initial [, keyf] [, cond] [, finalize] })
+ ```
+ Cette commande compte le nombre de livres par status :
+  ```
+ db.books.group ({
+    key: {status : true},
+    initial: {total : 0},
+    reduce :  function (items,prev) {
+                prev.total += 1
+              }
+})
+```
  
  https://docs.mongodb.com/manual/reference/method/db.collection.group/
 
