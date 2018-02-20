@@ -76,7 +76,10 @@ db.titanic.aggregate(
 db.titanic.aggregate( [ { $projet : {_id:0,name:1,age:1} },{$limit:10}]).pretty()
   ```
 ***$unwind***
-
+produit pour chaque element du tableau un nouveau document.
+```
+db.titanic.aggregate({ $unwind : "$embarked" }).pretty()
+```
 https://docs.mongodb.com/manual/aggregation/
 
  ***2) les fonctions dédiées :***
