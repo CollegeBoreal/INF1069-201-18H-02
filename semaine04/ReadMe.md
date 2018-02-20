@@ -38,7 +38,7 @@ https://docs.mongodb.com/manual/aggregation/
  
  https://docs.mongodb.com/manual/reference/method/db.collection.group/
 
- ***3)  le MapReduce***
+ ***3)  le MapReduce*** sera expliqué et détaillé dans les prochaines séances
  
 
 
