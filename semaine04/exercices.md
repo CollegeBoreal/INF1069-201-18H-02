@@ -1,4 +1,4 @@
-***Question1:*** Importez les fichiers suivants dans mongo : IndiaStates.json et cityInspections.json
+***Question 1:*** Importez les fichiers suivants dans mongo : IndiaStates.json et cityInspections.json
 
 Expliquez les commandes suivantes 
 ```
