@@ -22,6 +22,7 @@ Pour compter le nombre de personnes dans chaque document regroupé selon le lieu
 db.titanic.aggregate({$group:{_id:"$embarked",count:{$sum:1}}}).pretty()
 ```
 ***$match***
+
 L'opération $match filtre les documents correspondant aux critères de recherche.
 Example : on veut regrouper tous les documents dont l'age est superieur a 17 selon le lieu d'embarquement et le sexe.
 ```
