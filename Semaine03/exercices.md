@@ -17,5 +17,3 @@ une date de publication.
 **Question 7 :** Combien de livres y a-t-il dont la catégorie est Networking ou qui n'ont pas été publiés.
 
 [solutions](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine03/solutions.md)
-
-
