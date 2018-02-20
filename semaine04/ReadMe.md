@@ -13,6 +13,15 @@ $group
 
 L'opération $group permet de grouper les documents dans une collection selon certains critères spécifiques et d'effectuer quelques opérations d'agrégation telles que le comptage, la sommation, etc...
 
+Pour regrouper les documents selon le lieu d'embarquement : 
+```
+db.titanic.aggregate({$group:{_id:"$embarked"}}).pretty()
+```
+Pour compter le nombre de personnes dans chaque document regroupé selon le lieu d'embarquement : 
+```
+db.titanic.aggregate({$group:{_id:"$embarked",count:{$sum:1}}}).pretty()
+```
+
 https://docs.mongodb.com/manual/aggregation/
 
  ***2) les fonctions dédiées :***
