@@ -1,6 +1,7 @@
 ***Question 1 :***
 
 Affiche les etats de l'Inde.
+
 Affiche les etats de l'Inde qui ont une capitale.
 
 ***Question 2 :***
