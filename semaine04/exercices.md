@@ -26,19 +26,19 @@ Dans votre collection IndiaStates, vous avez une liste des villes. Vous devez tr
 
 ***Question 4***
 
-Trouvez l'état le plus large.
+Trouvez l'état le plus large et l'état le moins large.
 
 ***Question 5***
 
-Trouvez le nombre d'inspections par mois en 2015. Présentez le résulat mensuel en ordre décroissant.
+Trouvez le nombre d'inspections par mois en 2015. Présentez le résulat mensuel par ordre croissant.
 
 ***Question 6***
 
-Trouvez le mois ayant le plus de réussite ("Pass").
+Trouvez le mois ayant le plus de réussite ("Pass") et le mois ayant le moins de réussite.
 
 ***Question 7***
 
-Trouvez la ville la plus inspectée.
+Trouvez la ville la plus inspectée et la ville la moins inspectée.
 
 ***Question 8***
 
