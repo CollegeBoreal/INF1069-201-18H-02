@@ -49,4 +49,5 @@ Trouvez le pourcentage des avertissements (Warning).
 Présentez pour chaque ville, la somme des inspections par secteur.
 
 
+
 [solutions] (https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/semaine04/solutions.md)
