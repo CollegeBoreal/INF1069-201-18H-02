@@ -23,7 +23,7 @@ db.IndiaStates.aggregate(
 ```
 {$substr: ["$cities", 0, 1]} retourne la premiere lettre de chaque ville.
 
-***Question 4:***
+***Question 4 :***
 
 Cette commande retourne l'etat le moins large
 
