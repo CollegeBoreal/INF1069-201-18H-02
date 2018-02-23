@@ -17,7 +17,7 @@ db.IndiaStates.aggregate(
 
 Comment réécrire la commande suivante en utilisant les fonctions d'agrégation.
 ```
-db.IndiaStates.find({"state":/MUMBAI/i})
+db.IndiaStates.find({"state":/PUNJAB/i})
 ```
 
 ***Question 3***
