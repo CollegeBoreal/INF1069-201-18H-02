@@ -148,6 +148,46 @@ db.cityInspections.aggregate(
     }
 ]).pretty()
 ```
+
+***Question 8 :***
+
+```
+var total = db.cityInspections.count();
+db.cityInspections.aggregate(
+[    
+    {
+        $group: 
+        {       
+            "_id": "$result", "count": {$sum: 1}
+        }
+    },
+    {
+        $project:
+        {
+            "result": "$result",
+            "count": "$count",
+            "percentage": {"$multiply": [{"$divide": [100,total]}, "$count"]},
+            "percentageStr": 
+            { 
+                "$concat": 
+                [ 
+                    {"$substr": 
+                        [ 
+                            {"$multiply": 
+								[
+                                    {"$divide": ["$count", {"$literal": total }]}, 100 
+                                ]
+                            }, 0, 4 
+                        ]
+                    }, "%"
+                ]
+            } 
+        }
+    }
+]).pretty()
+```
+Le champ "percentageStr" permet d'afficher le resultat en pourcentage i.e le pourcentage des avertissements.
+
 ***Question 9 :***
 
 ```
