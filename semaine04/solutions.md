@@ -7,7 +7,7 @@ Affiche les etats de l'Inde qui ont une capitale.
 ***Question 2 :***
 
 ```
-db.IndiaStates.aggregate({$match: {"state": /MUMBAI/i}}).pretty()
+db.IndiaStates.aggregate({$match: {"state": /PUNJAB/i}}).pretty()
 ```
 ***Question 3 :***
 
@@ -21,6 +21,7 @@ db.IndiaStates.aggregate(
 	{$limit: 3}
 ).pretty()
 ```
+{$substr: ["$cities", 0, 1]} retourne la premiere lettre de chaque ville.
 
 ***Question 4:***
 
@@ -42,6 +43,8 @@ db.IndiaStates.aggregate(
 	{$limit: 1}
 ).pretty()
 ```
+
+"$info.area" permet de recuperer les superficies (area)  dans le champ info et { $min: "$info.area" } retourne la superficie minimale parmi les superficies des villes. 
 
 
 ***Question 5 :***
