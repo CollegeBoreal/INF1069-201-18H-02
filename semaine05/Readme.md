@@ -18,3 +18,8 @@ L'exemple suivant crée un index ascendant à clé unique dans le champ name :
 ```
 db.titanic.createIndex( { name: 1 } )
 ```
+Pour afficher tous les index de la collection titanic, on execute la syntaxe suivante : 
+
+```
+db.titanic.getIndexes()
+```
