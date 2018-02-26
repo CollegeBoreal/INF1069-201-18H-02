@@ -10,6 +10,7 @@ Pour créer un index, on utilise la procédure suivante :
 
 ```
 db.collection.createIndex( <key and index type specification>, <options> )
+db.collection.ensureIndex(index, options)
 ```
 Par défaut, un index dans MongoDB est positionné sur le champ _id.
 
@@ -22,4 +23,10 @@ Pour afficher tous les index de la collection titanic, on execute la syntaxe sui
 
 ```
 db.titanic.getIndexes()
+```
+
+Pour supprimer un index :
+
+```
+db.collection.dropIndex(name)
 ```
