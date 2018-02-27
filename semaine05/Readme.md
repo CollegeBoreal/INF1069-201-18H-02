@@ -32,3 +32,4 @@ db.collection.dropIndex(name)
 ```
 
 https://docs.mongodb.com/manual/core/index-single/
+
