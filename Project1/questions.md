@@ -1,6 +1,10 @@
 # L'objectif de ce projet est de manipuler et d'analyser les données de vols (flights) en utilisant les fonctions d'agrégation et les indexes de MongDB. #
 
-Importer le jeu de données ***flights*** dans MongoDB et assigner le nom ***flights*** à la collection créée.
+Importer le jeu de données ***flights*** dans MongoDB et assigner le nom ***flights*** à la collection créée. 
+
+La description des champs se trouvent dans le lien suivant : 
+
+https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236
 
 ### Question 1 ###
 
