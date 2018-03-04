@@ -4,16 +4,44 @@ Importer le jeu de données flights dans MongoDB.
 
 ### Question 1 ###
 
-When is the best time of day/day of week/time of year to fly to minimize delays ?
+Quel est le meilleur moment du jour / de la semaine / de l'année pour voler afin de minimiser les retards ?
 
 ### Question 2 ###
 
-What types of planes suffer the most delays? How old are these planes ?
+Quels types d'avions accusent le plus de retards ? 
+
 
 ### Question 3 ###
 
-How often does a delay cascade into other flight delays ?
+À quelle fréquence un retard intervient-il dans d'autres retards de vol?
 
 ### Question 4 ###
 
-What was the effect of Hurricane Sandy on air transportation in New York? How quickly did the state return to normal ?
+Quel a été l'effet de l'ouragan Sandy sur le transport aérien à New York? Avec quelle rapidité l'état est-il redevenu normal?
+
+### Question 5 ###
+
+Exécute cette syntaxe dans mongo :
+
+```
+db.flights.aggregate(
+    {"$match" : {"ARR_DELAY" : {"$gt" : 0}, "DEP_DELAY" : {"$lte" : 0}}} 
+    , {"$group" : {"_id" : "$ORIGIN_STATE_NM", "FL_NUM" : {"$sum" : 1}}}
+    , {"$sort" : {"FL_NUM" : -1}}
+    , {"$limit" : 5}
+);
+```
+
+Créer un index composé sur les champs ARR_DELAY et dep_Delay ({ARR_DELAY : -1, DEP_DELAY : -1}). 
+
+Ensuite, tapez cette commande :
+
+```
+db.flights.aggregate(
+    {"$match" : {"ARR_DELAY" : {"$gt" : 0}, "DEP_DELAY" : {"$lte" : 0}}} 
+    , {"$group" : {"_id" : "$ORIGIN_STATE_NM", "FL_NUM" : {"$sum" : 1}}}
+    , {"$sort" : {"FL_NUM" : -1}}
+    , {"$limit" : 5}
+);
+```
+Que constatez ?
