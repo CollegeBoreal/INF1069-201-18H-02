@@ -1,6 +1,6 @@
 # L'objectif de ce projet est de manipuler et d'analyser les données de vols (flights) en utilisant les fonctions d'agrégation et les indexes de MongDB. #
 
-Importer le jeu de données flights dans MongoDB.
+Importer le jeu de données ***flights*** dans MongoDB et assigner le nom ***flights*** à la collection créée.
 
 ### Question 1 ###
 
