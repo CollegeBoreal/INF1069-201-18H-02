@@ -17,11 +17,11 @@ Quels types d'avions accusent le plus de retards ?
 
 ### Question 3 ###
 
-À quelle fréquence un retard intervient-il dans d'autres retards de vol?
+À quelle fréquence un retard intervient-il dans d'autres retards de vol ?
 
 ### Question 4 ###
 
-Quel a été l'effet de l'ouragan Sandy sur le transport aérien à New York? Avec quelle rapidité l'état est-il redevenu normal?
+Quel a été l'effet de l'ouragan Sandy sur le transport aérien à New York ? Avec quelle rapidité l'état est-il redevenu normal ?
 
 ### Question 5 ###
 
@@ -48,4 +48,4 @@ db.flights.aggregate(
     , {"$limit" : 5}
 );
 ```
-Que constatez ?
+Que constatez-vous ?
