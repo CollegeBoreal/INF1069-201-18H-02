@@ -80,13 +80,22 @@ db.Collection.createIndex( { "champ": 1 } , { sparse: true, unique: true } )
 
 La syntaxe ci-dessus rassure l'unicité des valeurs du champ indexé et applique le filtre sur les documents.
 
-Example : 
+Example : On insere quelques documents dans la collecion grade.
 ```
-db.grade.insert({ "_id" : ObjectId("523b6e32fb408eea0eec2647"), "name" : "Jack","grade":95 },
-{ "_id" : ObjectId("523b6e61fb408eea0eec2648"), "name" : "John", "grade" : 85 },
-{ "_id" : ObjectId("523b6e6ffb408eea0eec2649"), "name" : "Robert", "grade" : 90 })
-
+db.grade.insert(
+                { "_id" : ObjectId("523b6e32fb408eea0eec2647"), "name" : "Jack","grade":95 },
+                { "_id" : ObjectId("523b6e61fb408eea0eec2648"), "name" : "John", "grade" : 85 },
+                 { "_id" : ObjectId("523b6e6ffb408eea0eec2649"), "name" : "Robert", "grade" : 90 }
+                )
+```
+On cree un indexe sur le champ grade
+```
 db.grade.createIndex( { grade: 1 } , { sparse: true, unique: true } )
 ```
+Cette commande permet d'inserer des documents qui des valeurs uniques dans le champ grade.
 
+```
+db.grade.insert( {"name" : "Celine","grade":92 } )
+db.grade.insert( { "name" : "Mat","grade":80} )
+```
 
