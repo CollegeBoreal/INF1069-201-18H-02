@@ -43,9 +43,10 @@ où chanp1 et champ2 désignent les champs sur lesquels on veut indexer.
 
 ### Text Indexes ###
 
+Pour créer un indexe de texte, utilisez la méthode db.collection.createIndex (). Pour indexer un champ qui contient une chaîne de caractere ou un tableau d'éléments de chaîne, incluez le champ et spécifiez la chaîne littérale "text" dans le document d'indexe, comme dans l'exemple suivant:
 
 ```
-db.reviews.createIndex( { comments: "text" } )
+db.Collection.createIndex( { comments: "text" } )
 ```
 
 ### Unique Index on a single field ###
