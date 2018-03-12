@@ -44,6 +44,7 @@ où chanp1 et champ2 désignent les champs sur lesquels on veut indexer.
 ### Text Indexes ###
 
 
+
 ### Unique Index on a single field ###
 
 L'unique indexe sur un seul champ permet d'assurer que les champs indexes n'ont pas de valeus dupliquées.
@@ -53,11 +54,39 @@ db.Collection.createIndex( { "champ": 1 }, { unique: true } )
 ```
 ### Unique Compound Index ###
 
-L'unique indexe sur plusieurs champs permet d'assurer que les champs indexes n'ont pas de valeus dupliquées.
+L'unique indexe sur plusieurs champs permet d'assurer l'unicité des valeurs dans les champs indexés.
 
 ```
 db.Collection.createIndex( { "Champ1": 1, "champ2": 1, "champ3": 1 }, { unique: true } )
 ```
+où chanp1, champ2 et champ3 désignent les champs sur lesquels on veut indexer.
 
+### Sparse indexes ###
+
+Sparse indexes contiennent uniquement des données pour les documents contenant le champ indexé.
+
+Example : 
+```
+db.Collection.createIndex( { "champ": 1 }, { sparse: true } )
+```
+https://docs.mongodb.com/manual/core/index-sparse/
+
+
+On peut aussi combiner ces deux proprietés en créant un indexe i.e. la contrainte de l'unicité (unique) et le filtre Sparse. 
+
+```
+db.Collection.createIndex( { "champ": 1 } , { sparse: true, unique: true } )
+```
+
+La syntaxe ci-dessus rassure l'unicité des valeurs du champ indexé et applique le filtre sur les documents.
+
+Example : 
+```
+db.grade.insert({ "_id" : ObjectId("523b6e32fb408eea0eec2647"), "name" : "Jack","grade":95 },
+{ "_id" : ObjectId("523b6e61fb408eea0eec2648"), "name" : "John", "grade" : 85 },
+{ "_id" : ObjectId("523b6e6ffb408eea0eec2649"), "name" : "Robert", "grade" : 90 })
+
+db.grade.createIndex( { grade: 1 } , { sparse: true, unique: true } )
+```
 
 
