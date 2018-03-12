@@ -88,7 +88,7 @@ db.grade.insert(
                  { "_id" : ObjectId("523b6e6ffb408eea0eec2649"), "name" : "Robert", "grade" : 90 }
                 )
 ```
-On cree un indexe sur le champ grade
+On cree un indexe sur le champ grade avec la contrainte d'unicite et du filtre sparse
 ```
 db.grade.createIndex( { grade: 1 } , { sparse: true, unique: true } )
 ```
@@ -97,5 +97,9 @@ Cette commande permet d'inserer des documents qui des valeurs uniques dans le ch
 ```
 db.grade.insert( {"name" : "Celine","grade":92 } )
 db.grade.insert( { "name" : "Mat","grade":80} )
+```
+Avec la syntaxe ci-dessous, l'indexe ne sera pas crée vu que la valeur du grade (92) existe deja. 
+```
+db.grade.insert( {"name" : "Celine","grade":92 } )
 ```
 
