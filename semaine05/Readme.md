@@ -44,6 +44,9 @@ où chanp1 et champ2 désignent les champs sur lesquels on veut indexer.
 ### Text Indexes ###
 
 
+```
+db.reviews.createIndex( { comments: "text" } )
+```
 
 ### Unique Index on a single field ###
 
