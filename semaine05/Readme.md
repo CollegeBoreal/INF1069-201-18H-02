@@ -33,3 +33,10 @@ db.collection.dropIndex(name)
 
 https://docs.mongodb.com/manual/core/index-single/
 
+### Indexes composés ###
+
+Pour créer un indexe composé, on utilise la syntaxe suivante :
+```
+db.collection.createIndex( { "champ1": 1, "champ2": 1 } )
+```
+où chanp1 et champ2 désignent les champs sur lesquels on veut indexer.
