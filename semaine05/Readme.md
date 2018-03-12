@@ -40,3 +40,24 @@ Pour créer un indexe composé, on utilise la syntaxe suivante :
 db.collection.createIndex( { "champ1": 1, "champ2": 1 } )
 ```
 où chanp1 et champ2 désignent les champs sur lesquels on veut indexer.
+
+### Text Indexes ###
+
+
+### Unique Index on a single field ###
+
+L'unique indexe sur un seul champ permet d'assurer que les champs indexes n'ont pas de valeus dupliquées.
+
+```
+db.Collection.createIndex( { "champ": 1 }, { unique: true } )
+```
+### Unique Compound Index ###
+
+L'unique indexe sur plusieurs champs permet d'assurer que les champs indexes n'ont pas de valeus dupliquées.
+
+```
+db.Collection.createIndex( { "Champ1": 1, "champ2": 1, "champ3": 1 }, { unique: true } )
+```
+
+
+
