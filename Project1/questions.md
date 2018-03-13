@@ -23,10 +23,6 @@ Quels types d'avions accusent le plus de retards ?
 
 ### Question 4 ###
 
-Quel a été l'effet de l'ouragan Sandy sur le transport aérien à New York ? Avec quelle rapidité l'état est-il redevenu normal ?
-
-### Question 5 ###
-
 Exécute cette syntaxe dans mongo :
 
 ```
