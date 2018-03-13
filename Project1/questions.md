@@ -37,7 +37,7 @@ db.flights.aggregate(
 );
 ```
 
-Créer un index composé sur les champs ***ARR_DELAY*** et ***dep_Delay*** ({ARR_DELAY : -1, DEP_DELAY : -1}). 
+Créer un index composé sur les champs ***ARR_DELAY*** et ***DEP_DELAY*** ({ARR_DELAY : -1, DEP_DELAY : -1}). 
 
 Ensuite, tapez cette commande :
 
