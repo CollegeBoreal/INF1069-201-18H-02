@@ -8,9 +8,13 @@ https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236
 
 ### Question 1 ###
 
-Quel est le meilleur moment du jour pour voler afin de minimiser les retards ?
-Quel est le meilleur moment de la semaine pour voler afin de minimiser les retards ?
-Quel est le meilleur moment de l'année pour voler afin de minimiser les retards ?
+On suppose que les retards des arrivees (ARR_DELAY dans la collection flights) sont les retards consideres pour les questions ci-dessous. Donc on s'interesse a la moyenne des retards des arrivees. 
+
+Quel est le meilleur moment du jour pour voler afin de minimiser les retards ? (ArrTimeBlk et ArrDelay sont les champs qu'il faut utiliser pour repondre a cette question)
+
+Quel est le meilleur moment de la semaine pour voler afin de minimiser les retards ? (DayofWeek et ArrDelay)
+
+Quel est le meilleur moment de l'année pour voler afin de minimiser les retards ? (DayofMonth et ArrDelay)
 
 ### Question 2 ###
 
