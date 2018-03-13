@@ -86,10 +86,10 @@ La syntaxe ci-dessus rassure l'unicité des valeurs du champ indexé et applique
 
 Example : On insere quelques documents dans la collecion grade.
 ```
-db.grade.insert(
+db.grade.insert([
                 { "_id" : ObjectId("523b6e32fb408eea0eec2647"), "name" : "Jack","grade":95 },
                 { "_id" : ObjectId("523b6e61fb408eea0eec2648"), "name" : "John", "grade" : 85 },
-                 { "_id" : ObjectId("523b6e6ffb408eea0eec2649"), "name" : "Robert", "grade" : 90 }
+                 { "_id" : ObjectId("523b6e6ffb408eea0eec2649"), "name" : "Robert", "grade" : 90 }]
                 )
 ```
 On cree un indexe sur le champ grade avec la contrainte d'unicite et du filtre sparse
