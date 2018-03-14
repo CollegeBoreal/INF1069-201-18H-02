@@ -7,7 +7,7 @@ La modelisation des donnees consiste a recuperer et analyser les donnees. Le pri
 Normalized data models describe relationships using references between documents.
 
 
-### Embedded Data Models ###
+### Embedded documents ###
 
 With MongoDB, you may embed related data in a single structure or document. These schema are generally known as “denormalized” models, and take advantage of MongoDB’s rich documents.
 
