@@ -14,7 +14,7 @@ Quel est le meilleur moment du jour pour voler afin de minimiser les retards ? (
 
 Quel est le meilleur moment de la semaine pour voler afin de minimiser les retards ? (***DAY_OF_WEEK*** et ***ARR_DELAY***)
 
-Quel est le meilleur moment de l'année pour voler afin de minimiser les retards ? (***MONTH*** et ***ARR_DELAY***)
+Quel est le meilleur moment de l'année pour voler afin de minimiser les retards ? (***QUATERS*** et ***ARR_DELAY***)
 
 ### Question 2 ###
 
