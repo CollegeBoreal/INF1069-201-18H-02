@@ -29,7 +29,7 @@ où les parametres et les options sont definis ci-dessous :
 | *reduce* | function | A JavaScript function that “reduces” to a single object all the values associated with a particular key. |
 | *options* | document | A document that specifies additional parameters to ***db.collection.mapReduce().*** |
 
-La seule option requise parmi les options est l'option ***out***.
+La seule option requise parmi les options est l'option *out*.
 
 | Options | types | Description |
 | --- | --- | --- |
