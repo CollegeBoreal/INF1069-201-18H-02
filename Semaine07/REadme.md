@@ -32,8 +32,8 @@ db.collection.mapReduce(
 | Champs | types | Description |
 | --- | --- | --- |
 | out | document or string | Specifies the location of the result of the map-reduce operation. You can output to a collection, output to a collection with an action, or output inline. You may output to a collection when performing map-reduce operations on the primary members of the set; on secondary members you may only use the inline output.|
-| query	| document	| Specifies the selection criteria using query operators for determining the documents input to the map function.
-sort	document	Sorts the input documents. This option is useful for optimization. For example, specify the sort key to be the same as the emit key so that there are fewer reduce operations. The sort key must be in an existing index for this collection.
+| query	| document	| Specifies the selection criteria using query operators for determining the documents input to the map function.|
+| sort	| document	Sorts the input documents. This option is useful for optimization. For example, specify the sort key to be the same as the emit key so that there are fewer reduce operations. The sort key must be in an existing index for this collection.
 limit	number	Specifies a maximum number of documents for the input into the map function.|
 | finalize |	function	| Optional. Follows the reduce method and modifies the output.|
 |scope	| document|	Specifies global variables that are accessible in the map, reduce and finalize functions.|
