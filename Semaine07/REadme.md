@@ -30,7 +30,7 @@ où les parametres et les options sont definis ci-dessous :
 | options | document | A document that specifies additional parameters to ***db.collection.mapReduce().*** |
 
 
-| Champs | types | Description |
+| Options | types | Description |
 | --- | --- | --- |
 | out | document or string | Specifies the location of the result of the map-reduce operation. You can output to a collection, output to a collection with an action, or output inline. You may output to a collection when performing map-reduce operations on the primary members of the set; on secondary members you may only use the inline output.|
 | query	| document	| Specifies the selection criteria using query operators for determining the documents input to the map function.|
