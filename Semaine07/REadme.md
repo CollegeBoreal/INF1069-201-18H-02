@@ -21,6 +21,7 @@ db.collection.mapReduce(
                          }
                        )
 ```
+où les parametres et les options sont definis ci-dessous :
 
 | Parametres | types | Description |
 | --- | --- | --- |
