@@ -26,7 +26,7 @@ db.collection.mapReduce(
 | --- | --- | --- |
 | map | function | A JavaScript function that associates or “maps” a value with a key and emits the key and value pair. |
 | reduce | function | A JavaScript function that “reduces” to a single object all the values associated with a particular key. |
-| options | document | A document that specifies additional parameters to db.collection.mapReduce(). |
+| options | document | A document that specifies additional parameters to *db.collection.mapReduce().* |
 
 
 | Champs | types | Description |
@@ -37,8 +37,8 @@ db.collection.mapReduce(
 |limit	| number |	Specifies a maximum number of documents for the input into the map function.|
 | finalize |	function	| Optional. Follows the reduce method and modifies the output.|
 |scope	| document|	Specifies global variables that are accessible in the map, reduce and finalize functions.|
-|jsMode |	boolean	| Specifies whether to convert intermediate data into BSON format between the execution of the map and reduce functions.Defaults to false.|
+|jsMode |	boolean	| Specifies whether to convert intermediate data into ***BSON format*** between the execution of the map and reduce functions. Defaults to false.|
 |   |   | ***If false:*** Internally, MongoDB converts the JavaScript objects emitted by the map function to BSON objects. These BSON objects are then converted back to JavaScript objects when calling the reduce function.The map-reduce operation places the intermediate BSON objects in temporary, on-disk storage. This allows the map-reduce operation to execute over arbitrarily large data sets.|
-|   |    | ***If true:*** Internally, the JavaScript objects emitted during map function remain as JavaScript objects. There is no need to convert the objects for the reduce function, which can result in faster execution. You can only use jsMode for result sets with fewer than 500,000 distinct key arguments to the mapper’s emit() function.|
-| verbose	| boolean	| Specifies whether to include the timing information in the result information. Set verbose to true to include the timing information. Defaults to false.|
+|   |    | ***If true:*** Internally, the JavaScript objects emitted during map function remain as JavaScript objects. There is no need to convert the objects for the reduce function, which can result in faster execution. You can only use ***jsMode for result sets with fewer than 500,000 distinct key arguments to the *mapper’s emit() function.***|
+| verbose	| boolean	| Specifies whether to include the timing information in the result information. ***Set verbose to true to include the timing information.*** Defaults to false.|
 
