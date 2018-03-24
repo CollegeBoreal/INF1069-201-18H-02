@@ -33,6 +33,7 @@ db.flights.aggregate(
     , {"$sort" : {"retards" : 1}}
 );
 ```
+La meilleure période de l'année pour voyager se trouve entre janvier et mars.
 
 ### Question 2 : ###
 
@@ -44,8 +45,8 @@ db.flights.aggregate(
 );
 ```
 
-Les types d'avion qui accusent plus de retards concernant les departs sont : Frontiers Airlines et Envoy Air avec respectivement 17 et 16 minutes de retards. Et on 
-constate que HA (Hawaiian Airlines) accuse seulement 1 minute de retard pour les departs.
+Les types d'avion qui accusent plus de retards concernant les départs sont : Frontiers Airlines et Envoy Air avec respectivement 17 et 16 minutes de retards. Et on 
+constate que HA (Hawaiian Airlines) accuse seulement 1 minute de retard pour les départs.
 
 ### Question 3 : ###
 
@@ -56,7 +57,7 @@ db.flights.aggregate(
 );
 ```
 
-Le pire Etat connu pour les retards des departs de vols est le Delaware avec 26 minutes de retards tandis que Alaska accuse comme
+Le pire Etat connu pour les retards des départs de vols est le Delaware avec 26 minutes de retards tandis que Alaska accuse comme
 retard 2 minutes approximativement.
 
 
