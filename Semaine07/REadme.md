@@ -44,3 +44,7 @@ La seule option requise parmi les options est l'option *out*.
 |   |    | ***If true:*** Internally, the JavaScript objects emitted during map function remain as JavaScript objects. There is no need to convert the objects for the reduce function, which can result in faster execution. You can only use ***jsMode for result sets with fewer than 500,000 distinct key arguments to the mapper’s emit() function.***|
 | *verbose*	| boolean	| Specifies whether to include the timing information in the result information. ***Set verbose to true to include the timing information.*** Defaults to false.|
 
+
+Example : 
+
+![alt tag](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/mapreduceexample1.PNG)
