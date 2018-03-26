@@ -64,3 +64,5 @@ db.mapreduceBooks.mapReduce(mapp, reducep, {
     }
 )
 ```
+
+[exercices](https://github.com/CollegeBoreal/INF1069-201-18H-02/edit/master/Semaine07/exercices.md)
