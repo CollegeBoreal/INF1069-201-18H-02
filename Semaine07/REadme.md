@@ -51,7 +51,7 @@ L'example ci-dessous est un example de l'opération map-reduce i.e. il explique 
 
 ![alt tag](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/mapreduceexample2.PNG)
 
-Avec l'opération map-reduce, nous calculerons le total d'hommes qui ont embarqué dans Titanic :
+Avec l'opération map-reduce, nous calculerons le nombre d'hommes qui ont embarqué dans Titanic :
 
 ```
 function mapt(){
