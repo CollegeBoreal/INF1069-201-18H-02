@@ -64,4 +64,43 @@ db.mapreduceBooks.mapReduce(mapp, reducep, {
     }
 )
 ```
+
+### Question 3 ###
+
+```
+db.cityInspections.mapReduce(
+	function() {
+		var m = this.issue_date.getMonth()+1;
+        emit( m, 1 );
+    },
+	function(key, values) {
+		count = 0;
+		for (var index = 0; index < values.length; ++index) {
+			count += values[index];
+		}
+		return count;
+    },
+    {
+		query:  
+		{
+			$and: 
+			[
+				{"result": {"$exists": true}},
+				{"result": "No violation issued"},
+				{"issue_date": {"$exists": true}}
+			]
+		},
+		out: {replace: "question3"}
+	}
+)
+
+db.question4.find({}).sort({"value":-1}).limit(5)
+```
+
+### Question 4 ###
+
+
+
+
+
 [exercices](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/exercices.md)
