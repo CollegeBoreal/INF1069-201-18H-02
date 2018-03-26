@@ -99,5 +99,6 @@ var finalizefunction = function (key, reduceVal) {
 	reduceVal.avg = reduceVal.num/reduceVal.count;
 	return reduceVal;
 };
+
 db.titanic.mapReduce(mapfunction,reducefunction,{ out: "hfmoyenneclass",finalize : finalizefunction  });
 ```
