@@ -45,7 +45,7 @@ La seule option requise parmi les options est l'option *out*.
 | *verbose*	| boolean	| Specifies whether to include the timing information in the result information. ***Set verbose to true to include the timing information.*** Defaults to false.|
 
 
-Example : 
+L'example ci-dessous est un example de l'opération map-reduce i.e. il explique le fonctionnement de l'opération map-reduce.
 
 ![alt tag](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/mapreduceexample1.PNG)
 
