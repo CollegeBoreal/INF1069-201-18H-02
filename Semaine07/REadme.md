@@ -50,3 +50,22 @@ L'example ci-dessous est un example de l'opération map-reduce i.e. il explique 
 ![alt tag](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/mapreduceexample1.PNG)
 
 ![alt tag](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/mapreduceexample2.PNG)
+
+Avec l'opération map-reduce, nous calculerons le total d'hommes qui ont embarqué dans Titanic :
+
+```
+function mapt(){
+emit(this.name, this.sex);
+};
+
+function reducet(key,values){
+return Array.sum(values);
+}
+
+db.titanic.mapReduce(mapt, reducet,
+{ 
+  query : {sex:"male"},
+  out : "total_hommes"
+}
+                     )
+```
