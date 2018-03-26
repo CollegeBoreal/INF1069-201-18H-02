@@ -60,7 +60,7 @@ emit(this.name, this.sex);
 
 function reducet(key,values){
 return Array.sum(values);
-                            }
+                            };
 
 db.titanic.mapReduce(mapt, reducet,
 { 
@@ -68,4 +68,36 @@ db.titanic.mapReduce(mapt, reducet,
   out : "total_hommes"
 }
                      )
+```
+
+Dans cet example, on veut calculer dans chaque classe le total d'hommes et de femmes dans chaque classe qui ont embarque dans Titanic
+
+```
+var mapfunction = function() {
+	var value = {
+		pclass : this.pclass,
+		count : 1
+	};
+	emit(this.sex, value);
+};
+
+var reducefunction = function(key, values ) {
+	reduceVal = { pclass : 0, count : 0};
+	for (var i = 0; i < values.length; i++) {
+		reduceVal.pclass += values[i].pclass;
+		reduceVal.count += values[i].count;
+	}
+	return reduceVal;
+};
+
+db.titanic.mapReduce(mapfunction,reducefunction,{ out: "hftotalclass" });
+```
+On peut utiliser la fonction finalize pour calculer la moyenne :
+
+```
+var finalizefunction = function (key, reduceVal) {
+	reduceVal.avg = reduceVal.num/reduceVal.count;
+	return reduceVal;
+};
+db.titanic.mapReduce(mapfunction,reducefunction,{ out: "hfmoyenneclass",finalize : finalizefunction  });
 ```
