@@ -102,3 +102,5 @@ var finalizefunction = function (key, reduceVal) {
 
 db.titanic.mapReduce(mapfunction,reducefunction,{ out: "hfmoyenneclass",finalize : finalizefunction  });
 ```
+
+Pour plus d'examples : https://docs.mongodb.com/v3.2/tutorial/map-reduce-examples/.
