@@ -68,7 +68,7 @@ db.mapreduceBooks.mapReduce(mapp, reducep, {
 L'option scope permet de rendre le champ currency global i.e. on peut l'appeler ou le faire référence dans les functions map, reduce et 
 finalize.
 
-toFixed(2) permet de limiter les résultats des sorties à 2 chiffres après la virgule.
+toFixed(2) dans JavaScipt permet de limiter les résultats des sorties à 2 chiffres après la virgule.
 
 ### Question 3 ###
 
@@ -131,7 +131,7 @@ db.cityInspections.mapReduce(
 	}
 )
 
-db.question4.find({}).sort({"value":-1}).limit(1)
+db.question4.find({}).sort({"value":-1}).limit(5)
 ```
 
 toUpperCase et toLowerCase dans JavaScript changent respectivement les string, les caractères en majuscule et minuscule.
