@@ -74,7 +74,7 @@ Dans cet example, on veut calculer dans chaque classe le total d'hommes et de fe
 
 ```
 var mapfunction = function() {
-	emit(this.sex, 1);
+	emit(this.Pclass, this.sex);
 };
 
 var reducefunction = function(key, values ) {
