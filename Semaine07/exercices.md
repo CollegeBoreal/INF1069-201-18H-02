@@ -1,3 +1,11 @@
+Importez d'abord les fichiers ou documents json ci-dessous : 
+
+```
+ mongoimport --db semaine10 --collection mapreduceBooks --type json --drop  --file mapreduceBooks.json
+ mongoimport --db semaine10 --collection cityInspections --type json --drop  --file cityInspections.json
+```
+Les collections mapreduceBooks et cityInspections seront utilisées respectivement pour les questions 1 et 2, et 3 et 4.
+
 ### Question 1 ###
 
 Compter les livres par auteur.
@@ -8,10 +16,10 @@ Compter le prix moyen du livre par l'éditeur.
 
 ### Question 3 ### 
 
-Trouvez le mois ayant le plus de réussite ("Pass").
+Trouvez le mois ayant le plus de réussite ("No violation issued") et le mois ayant le moins de réussite ("violation issued").
 
 ### Question 4 ###
 
-Trouvez la ville la plus inspéctée.
+Trouvez la ville la plus inspectée et la ville la moins inspectée.
 
 [solutions](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/solutions.md)
