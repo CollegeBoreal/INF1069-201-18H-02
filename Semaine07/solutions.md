@@ -91,7 +91,7 @@ db.cityInspections.mapReduce(
 			$and: 
 			[
 				{"result": {"$exists": true}},
-				{"result": "No Violation Issued"},
+				{"result": "Pass"},
 				{"issue_date": {"$exists": true}}
 			]
 		},
