@@ -74,7 +74,7 @@ Dans cet example, on veut calculer dans chaque classe le total d'hommes et de fe
 
 ```
 var mapfunction = function() {
-	emit(this.sex, {count:1});
+	emit(this.sex, 1);
 };
 
 var reducefunction = function(key, values ) {
@@ -86,7 +86,7 @@ var reducefunction = function(key, values ) {
 };
 
 db.titanic.mapReduce(mapfunction,reducefunction,{ 
-query :{Pclass:{$ne:" "}},
+query :{sex:{$ne:" "}},
 out: "hftotalclass" });
 ```
 On peut utiliser la fonction finalize pour calculer la moyenne :
