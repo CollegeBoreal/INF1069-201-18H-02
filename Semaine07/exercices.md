@@ -16,7 +16,7 @@ Compter le prix moyen du livre par l'éditeur.
 
 ### Question 3 ### 
 
-Trouvez le mois ayant le plus de réussite ("No violation issued") et le mois ayant le moins de réussite ("violation issued").
+Trouvez le mois ayant le plus de réussite ("No Violation Issued") et le mois ayant le moins de réussite ("Violation Issued").
 
 ### Question 4 ###
 
