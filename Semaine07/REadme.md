@@ -56,11 +56,11 @@ Avec l'opération map-reduce, nous calculerons le total d'hommes qui ont embarqu
 ```
 function mapt(){
 emit(this.name, this.sex);
-};
+               };
 
 function reducet(key,values){
 return Array.sum(values);
-}
+                            }
 
 db.titanic.mapReduce(mapt, reducet,
 { 
