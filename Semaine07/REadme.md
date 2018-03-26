@@ -48,3 +48,5 @@ La seule option requise parmi les options est l'option *out*.
 Example : 
 
 ![alt tag](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/mapreduceexample1.PNG)
+
+![alt tag](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Semaine07/mapreduceexample2.PNG)
