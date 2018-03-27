@@ -74,17 +74,15 @@ Dans cet example, on veut calculer dans chaque classe le total d'hommes et de fe
 
 ```
 var mapfunction = function() {
-var value={sex:this.sex, count:1};
-	emit(this.Pclass, value);
+	emit({pclass: this.pclass,sex:this.sex}, 1);
 };
 
 var reducefunction = function(key, values ) {
-	reducv={sex:0,count = 0};
+	count = 0;
 	for (var i = 0; i < values.length; i++) {
-	reducev.sex += values[i].sex;
-	reducev.count += values[i].count;
+	count += values[i].count;
 	}
-	return reducev;
+	return count;
 };
 
 db.titanic.mapReduce(mapfunction,reducefunction,{ 
