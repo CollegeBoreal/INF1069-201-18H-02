@@ -82,7 +82,9 @@ var reducefunction = function(key, values ) {
 };
 
 db.titanic.mapReduce(mapfunction,reducefunction,{ 
-query : {$and[{sex:{$ne:""}},{pclass:{$ne:""}}]},
+
+query : {$and:[{sex:{$ne:""}},{pclass:{$ne:""}}]},
+
 out: "hftotalclass" });
 ```
 On peut utiliser la fonction finalize pour calculer la moyenne :
