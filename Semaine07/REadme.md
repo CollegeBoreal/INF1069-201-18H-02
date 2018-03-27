@@ -87,15 +87,5 @@ query : {$and:[{sex:{$ne:""}},{pclass:{$ne:""}}]},
 
 out: "hftotalclass" });
 ```
-On peut utiliser la fonction finalize pour calculer la moyenne :
-
-```
-var finalizefunction = function (key, reduceVal) {
-	reduceVal.avg = reduceVal.num/reduceVal.count;
-	return reduceVal;
-};
-
-db.titanic.mapReduce(mapfunction,reducefunction,{ out: "hfmoyenneclass",finalize : finalizefunction  });
-```
 
 Pour plus d'examples : https://docs.mongodb.com/v3.2/tutorial/map-reduce-examples/.
