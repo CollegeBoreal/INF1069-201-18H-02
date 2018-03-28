@@ -44,7 +44,7 @@ Quelle est la population moyenne des villes par Etat (***state***) ?
 
 #### Question 3 ####
 
-Quelles sont les plus petites et les plus grandes villes (***city***) dans chaque Etat (***state***) ?
+Quelles sont les villes (***city***) les plus peuplées et les moins peuplées dans chaque Etat (***state***) ?
 
 
 
