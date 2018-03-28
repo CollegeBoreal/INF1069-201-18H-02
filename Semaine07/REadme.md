@@ -88,4 +88,37 @@ query : {$and:[{sex:{$ne:""}},{pclass:{$ne:""}}]},
 out: "hftotalclass" });
 ```
 
+La syntaxe ci-dessous retourne le nombre de livres publiés par éditeur et le prix total.
+
+```
+function map1(){
+emit(this.publisher.name,{p:this.price,count:1});
+};
+
+function reduce1(key,values){
+var rvalue={p:0,count:0};
+for(var i=0;i<values.length;i++){
+rvalue.p +=values[i].p;
+rvalue.count +=values[i].count;
+}
+return rvalue;
+};
+
+db.mapreduceBooks.mapReduce(map1,reduce1,{out:"mpresult"});
+
+db.mpresult.find().pretty();
+```
+On peut utiliser la fonction finalize pour calculer le prix moyen des livres par éditeur.
+
+```
+ function finalizefunction(key, value) {
+	value.avg = value.p/value.count;
+	return value;
+};
+
+db.mapreduceBooks.mapReduce(map1,reduce1,{ out: "mpresult", finalize : finalizefunction });
+
+db.mpresult.find().pretty();
+```
+
 Pour plus d'examples : https://docs.mongodb.com/v3.2/tutorial/map-reduce-examples/.
