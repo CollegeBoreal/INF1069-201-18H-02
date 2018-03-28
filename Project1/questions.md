@@ -6,7 +6,7 @@ La description des champs se trouvent dans le lien suivant :
 
 https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236
 
-### Question 1 ###
+#### Question 1 ####
 
 On suppose que les retards des arrivees (***ARR_DELAY*** dans la collection flights) sont les retards consideres pour les questions ci-dessous. Donc on s'interesse a la moyenne des retards des arrivees. 
 
