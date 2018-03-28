@@ -8,7 +8,7 @@ db.flights.aggregate(
     , {"$sort" : {"retards" : 1}}
 );
 ```
-Le meilleur moment du jour pour voyager avec moins de retard est le matin (entre 7h et 9h) tandis qu'on observe plus de retards le soir 
+Le meilleur moment du jour pour voyager avec moins de retard est le matin (entre 7h et 9h), tandis qu'on observe plus de retards le soir 
 (entre 19h et minuit).
 
 ### Question 1 (suite) : ###
@@ -21,7 +21,7 @@ db.flights.aggregate(
 ```
 
 Le meilleur moment de la semaine pour voyager avec moins de retard ( 2 minutes de retards ) est le mercredi tandis qu'on observe plus de 
-retards concernant les arrivées des avions dans les autres jours de la semaine surtout les lundis et dimanches avec 9 à 10 minutes de retards.
+retards concernant les arrivées des avions dans les autres jours de la semaine, surtout les lundis et dimanches avec 9 à 10 minutes de retards.
 
 
 ### Question 1 (suite): ###
@@ -57,8 +57,8 @@ db.flights.aggregate(
 );
 ```
 
-Le pire Etat connu pour les retards des départs de vols est le Delaware avec 26 minutes de retards tandis que Alaska accuse comme
-retard 2 minutes approximativement.
+Le pire Etat connu pour les retards des départs de vols est le Delaware avec 26 minutes de retards tandis que Alaska accuse moins de 
+retard (approximativement 2 minutes).
 
 
 
