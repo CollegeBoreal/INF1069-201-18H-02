@@ -22,7 +22,9 @@ Le champ loc est la position géographique de la ville (latittude et longitude).
 Ce projet sera structuré comme suit :
 
 ***a)*** Explication des codes correspondant aux questions 
+
 ***b)*** Affichage des sorties partielles et leurs interprétations selon les questions
+
 ***c)*** Une annexe avec tous les codes et toutes les sorties par ordre des questions 
 
 ###############################################################################
