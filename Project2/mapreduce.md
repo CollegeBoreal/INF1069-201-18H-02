@@ -2,6 +2,9 @@
 
 Le jeu de données se trouve sur le site suivant :  http://media.mongodb.org/zips.json. 
 
+Tout d'abord, sauvegarder les données avec l'extension ***json*** tout en les nommant ***mapreduce***. Ensuite, importer ces données dans mongo et nommer la collection ***mapreduce*** lors de l'importation.
+
+
 Voici la description des champs : 
 
 Le champ _id contient le zip code des villes. 
@@ -14,5 +17,5 @@ Le champ pop est la population de la ville.
 
 Le champ loc est la position géographique de la ville (latittude et longitude).
 
-Tout d'abord, sauvegarder les données avec l'extension ***json*** tout en les nommant ***mapreduce***. Ensuite, importer ces données dans mongo et nommer la collection ***mapreduce*** lors de l'importation.
+
 
