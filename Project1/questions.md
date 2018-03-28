@@ -49,7 +49,6 @@ db.flights.aggregate(
     , {"$limit" : 5}
 );
 ```
-
 Que constatez-vous ?
 
 
