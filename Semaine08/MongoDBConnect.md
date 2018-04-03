@@ -1,3 +1,4 @@
+```
 package semaine09;
 
 import org.bson.Document;
@@ -34,3 +35,4 @@ public class MongoDBConnect {
         }
     }
 }
+```
