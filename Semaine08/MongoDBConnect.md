@@ -36,3 +36,5 @@ public class MongoDBConnect {
     }
 }
 ```
+
+http://www.mkyong.com/mongodb/java-mongodb-hello-world-example/
