@@ -38,3 +38,5 @@ public class MongoDBConnect {
 ```
 
 http://www.mkyong.com/mongodb/java-mongodb-hello-world-example/
+
+http://www.codejava.net/java-se/jdbc/java-connecting-to-mongodb-database-examples
