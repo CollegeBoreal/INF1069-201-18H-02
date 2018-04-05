@@ -20,7 +20,7 @@ public class MongoDBConnect {
 
             for (String databaseName : mongoClient.listDatabaseNames()) {
 
-                System.out.println("databaseName :" databaseName);
+                System.out.println( databaseName);
 
             }
             
