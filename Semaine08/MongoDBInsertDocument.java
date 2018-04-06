@@ -22,24 +22,26 @@ public class MongoDBInsertDocument {
             MongoDatabase database = mongoClient.getDatabase("semaine07");
 
             // Retrieving a collection
-            MongoCollection<Document> collection = database.getCollection("sampleCollection");
-            System.out.println("Collection sampleCollection selected successfully");
+            MongoCollection<Document> collection = database.getCollection("myCollection");
+            System.out.println("Collection myCollection selected successfully");
 
             Document document = new Document("title", "MongoDB")
                     .append("id", 1)
                     .append("description", "database")
                     .append("likes", 100)
-                    .append("url", "http://www.tutorialspoint.com/mongodb/")
-                    .append("by", "tutorials point");
+                    .append("url", "http://www.mywebsite.com/mongodb/")
+                    .append("by", "College Boreal");
             collection.insertOne(document);
             System.out.println("Document inserted successfully");
+            
             // Getting the iterable object
             FindIterable<Document> iterDoc = collection.find();
             // Getting the iterator
-            Iterator it = iterDoc.iterator();
-
-            while (it.hasNext()) {
-                System.out.println(it.next());
+            Iterator iterateur = iterDoc.iterator();
+             
+            // Displaying all documents
+            while (iterateur.hasNext()) {
+                System.out.println(iterateur.next());
             }
         } catch (MongoException e) {
             e.printStackTrace();
