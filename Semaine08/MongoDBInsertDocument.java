@@ -24,18 +24,22 @@ public class MongoDBInsertDocument {
             // Retrieving a collection
             MongoCollection<Document> collection = database.getCollection("myCollection");
             System.out.println("Collection myCollection selected successfully");
-
+            
+            // Creating a new document
             Document document = new Document("title", "MongoDB")
                     .append("id", 1)
                     .append("description", "database")
                     .append("likes", 100)
                     .append("url", "http://www.mywebsite.com/mongodb/")
                     .append("by", "College Boreal");
+            
+            //Inserting a new document into myCollection
             collection.insertOne(document);
             System.out.println("Document inserted successfully");
             
             // Getting the iterable object
             FindIterable<Document> iterDoc = collection.find();
+            
             // Getting the iterator
             Iterator iterateur = iterDoc.iterator();
              
