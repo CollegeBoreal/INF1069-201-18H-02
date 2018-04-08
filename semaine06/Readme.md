@@ -8,11 +8,11 @@ https://docs.mongodb.com/manual/core/data-model-design/
 
 Normalized data models describe relationships using references between documents.
 
-![alt tags](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/semaine06/data-model-normalized.png)
+![alt text](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/semaine06/data-model-normalized.png)
 
 
 ### Embedded documents ###
 
 With MongoDB, you may embed related data in a single structure or document. These schema are generally known as “denormalized” models, and take advantage of MongoDB’s rich documents.
 
-![alt tags](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/semaine06/datamodeldenormalized.png)
+![alt text](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/semaine06/datamodeldenormalized.png)
