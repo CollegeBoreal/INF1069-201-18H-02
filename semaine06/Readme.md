@@ -8,7 +8,8 @@ https://docs.mongodb.com/manual/core/data-model-design/
 
 Normalized data models describe relationships using references between documents.
 
-![alt text](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/semaine06/data-model-normalized.png)
+<img src="/https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/semaine06/data-model-normalized.png" />
+
 
 
 ### Embedded documents ###
