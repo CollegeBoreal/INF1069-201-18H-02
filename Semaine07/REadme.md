@@ -121,4 +121,5 @@ db.mapreduceBooks.mapReduce(map1,reduce1,{ out: "mpresult", finalize : finalizef
 db.mpresult.find().pretty();
 ```
 
+
 Pour plus d'examples : https://docs.mongodb.com/v3.2/tutorial/map-reduce-examples/.
