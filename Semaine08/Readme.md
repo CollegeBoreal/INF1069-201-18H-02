@@ -10,4 +10,11 @@ Get IntelliJ IDEA
 https://www.jetbrains.com/idea/#chooseYourEdition
 
 
+Creating, Running and Packaging your Java Application
+
+Le lien ci-dessous permet de configurer et de creer votre premier projet Java dans IntelliJ IDEA
+
+https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-application.html
+
+
 
