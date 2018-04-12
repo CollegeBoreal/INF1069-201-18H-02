@@ -33,6 +33,8 @@ public class SolutionsSemaine02 {
         
           // Question 5
         //question5();
+        // Question 5
+        //question6();
     }
 
     /**
@@ -178,6 +180,36 @@ public class SolutionsSemaine02 {
             // Create update document
             document = new Document();
             document.append("$unset",  new Document("age", 1));
+
+            // Update
+            updateResult = collection.updateOne(query, document);
+
+            // Print results
+            System.out.println("Update Result: \n" + updateResult.toString());
+        } catch(Exception e) {
+            // Print errors
+            System.err.println(e.toString());
+        }
+    }
+}
+
+
+
+public static void question6() {
+        Document query = null;
+        Document document = null;
+        MongoCollection collection = null;
+        UpdateResult updateResult = null;
+
+        try {
+            collection = mongoDatabase.getCollection("users");
+
+            // Create query
+            query = new Document("username", "Paul");
+
+            // Create update document
+            document = new Document();
+            document.append("$set",  new Document("Hobbies", new Document("sports","['soccer','boxing','volleyball']")));
 
             // Update
             updateResult = collection.updateOne(query, document);
