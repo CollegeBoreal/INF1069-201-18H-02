@@ -1,11 +1,12 @@
 
-```
 package semaine09;
 
 import org.bson.Document;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.MongoException;
+
+/*** La classe  MongoDBConnect permet de connecter Java a MongoDB tout en gerant les exceptions ***/
 
 public class MongoDBConnect {
     public static void main(String[] args) {
