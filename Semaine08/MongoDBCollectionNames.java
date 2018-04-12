@@ -4,6 +4,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.MongoException;
 
+/*** Cette classe permet d'afficher les collections de la base de donnees semaine04 ***/
 
 public class MongoDBCollectionNames {
     public static void main(String[] args) {
