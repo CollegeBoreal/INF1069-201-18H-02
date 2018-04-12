@@ -7,6 +7,10 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoException;
 import java.util.Iterator;
 import com.mongodb.client.FindIterable;
+
+/*** Cette classe permet d'inserer des documents dans la collection myCollection 
+    de la Database semaine07 ***/
+
 public class MongoDBInsertDocument {
     public static void main(String[] args) {
         MongoClient mongoClient=null;
@@ -43,7 +47,7 @@ public class MongoDBInsertDocument {
             // Getting the iterator
             Iterator iterateur = iterDoc.iterator();
              
-            // Displaying all documents
+            // Printing all documents
             while (iterateur.hasNext()) {
                 System.out.println(iterateur.next());
             }
