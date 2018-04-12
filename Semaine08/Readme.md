@@ -23,6 +23,6 @@ Ceci etant, creons un projet Maven dans IntelliJ IDEA afin de faire du developpe
 
  
  
- #### Connectez-vous au server MongoDB dans le terminal Windows or MacBook avant d'executer votre code Java ####
+ ### Connectez-vous au server MongoDB dans le terminal Windows or MacBook avant d'executer votre code Java ###
 
 Enfin, cliquez sur .......
