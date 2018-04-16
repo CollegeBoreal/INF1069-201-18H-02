@@ -67,10 +67,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 
  ### Connectez-vous au server MongoDB dans le terminal Windows or MacBook avant d'executer votre code Java ###
 
-Retournez dans Intellij IDEA pour creer un nouveau package ***Java*** appele ***semaine09**** et une nouvelle classe ***Java*** appelee 
+Retournez dans Intellij IDEA pour creer un nouveau package ***Java*** appele ***semaine09*** et une nouvelle classe ***Java*** appelee 
 
 ***MongoDBConnect***. Pour ce faire, on suit les etapes suivantes :
 
 1. Clique droit sur le nom du projet ***MongoDBJava***, ensuite ***New*** -> ***Package*** -> ***semaine09***.
 
-2. Clique droit sur le nom du projet ***MongoDBJava***, ensuite ***New Java Class *** -> ***MongoDBConnect***.
+2. Clique droit sur le nom du projet ***MongoDBJava***, ensuite ***New Java Class*** -> ***MongoDBConnect***.
+
+Completez cette classe, compilez-la et executez-la en cliquant sur ***Run***.
