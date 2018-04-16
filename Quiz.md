@@ -35,7 +35,7 @@ document2={"Nom":"Marley","Prénom":"Bob","Status":"Mort","Album":"Live"}
 10) Supprimer la base de donnees ***quiz***
 
 
-### Fonctions de recherche Quiz ###
+### Fonctions de recherche QUIZ ###
 
 1) Importez le fichier titanic.csv dans mongo et nommee la collection ***quiz2***
 
@@ -58,7 +58,7 @@ document2={"Nom":"Marley","Prénom":"Bob","Status":"Mort","Album":"Live"}
 10) Comptez le nombre de femmes de la classe 1 
 
 
-### Fonctions d'agregation ###
+### Fonctions d'agregation QUIZ ###
 
 Repondre avec les fonctions d'agregation les questions 2 a 10 des quiz de la fonction de recherche 
 
