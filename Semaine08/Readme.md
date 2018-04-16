@@ -75,4 +75,4 @@ Retournez dans Intellij IDEA pour creer un nouveau package ***Java*** appele ***
 
 2. Clique droit sur le nom du projet ***MongoDBJava***, ensuite ***New Java Class*** -> ***MongoDBConnect***.
 
-Completez cette classe, compilez-la et executez-la en cliquant sur ***Run***.
+Completez votre classe par le contenu de ce lien , compilez-la et executez-la en cliquant sur ***Run***.
