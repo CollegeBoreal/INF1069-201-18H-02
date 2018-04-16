@@ -60,6 +60,6 @@ document2={"Nom":"Marley","Prénom":"Bob","Status":"Mort","Album":"Live"}
 
 ### Fonctions d'agregation QUIZ ###
 
-Repondre avec les fonctions d'agregation les questions 2 a 10 des quiz de la fonction de recherche 
+Repondre avec les fonctions d'agregation les questions 2 et 7 a 10 des quiz de la fonction de recherche 
 
 
