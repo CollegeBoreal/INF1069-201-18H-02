@@ -1,4 +1,4 @@
-package semaine09;
+``` package semaine09;
 
 import org.bson.Document;
 import com.mongodb.MongoClient;
@@ -34,3 +34,4 @@ public class MongoDBConnect {
     }
  
 }
+```
