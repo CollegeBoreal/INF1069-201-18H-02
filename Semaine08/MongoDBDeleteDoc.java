@@ -12,15 +12,10 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.DeleteResult;
+import com.mongodb.MongoException;
 
-/**
- * This class connects to MongoDB and deletes a document.
- * Author : Steve Tshibangu
- * Email: steve.tshibangu-mutshi.1@collegeboreal.ca
- * Course: INF1069
- * Date : 2017-02-02
- */
-public class MongoDBDeleteDocument {
+
+public class MongoDBDeleteDoc {
     public static void main(String[] args) {
         MongoClient mongoClient = null;
         MongoDatabase mongoDatabase = null;
@@ -32,26 +27,17 @@ public class MongoDBDeleteDocument {
         Document document = null;
         Document documentDeleted = null;
         String documentKey = null;
-        String server = null;
-        int port = 0;
-        String database = null;
+ 
 
         try {
-            // Server name
-            server = "10.0.2.2";
-
-            // Port number
-            port = 27018;
-
-            // Database name
-            database = "semaine09";
+   
 
             // Connect to server
             mongoClient = new MongoClient(
-                            Arrays.asList(new ServerAddress(server, port)));
+                            Arrays.asList(new ServerAddress("127.0.0.1", 27017)));
 
             // Get the database
-            mongoDatabase = mongoClient.getDatabase(database);
+            mongoDatabase = mongoClient.getDatabase("semaine08");
 
             // Get the collection
             collection = mongoDatabase.getCollection("catalogDelete");
@@ -135,11 +121,12 @@ public class MongoDBDeleteDocument {
                 }
             }
 
-            // close the connection
-            mongoClient.close();
-        } catch(Exception e) {
-            // Print errors
-            System.err.println(e.toString());
+        } catch (MongoException e) {
+            e.printStackTrace();
+        } finally {
+            if(mongoClient!=null)
+                mongoClient.close();
         }
     }
+
 }
