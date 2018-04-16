@@ -27,7 +27,7 @@ Ouvrez d'abord Intellij IDEA
 
 2. Selectionnez ***Maven*** par les options se trouvant a gauche 
 
-3. Specifiez le projet SDK (JDK) en utilisant votre propre archetype. Pour nous, ca sera Java. Ensuite, cliquez sur next.
+3. Specifiez le projet SDK (JDK) en utilisant votre propre archetype. Pour nous, ca sera Java ***(Jar)***. Ensuite, cliquez sur next.
 
 4. Specifiez les 3 elements suivants :
 
@@ -39,6 +39,28 @@ Ouvrez d'abord Intellij IDEA
 
 Ensuite, cliquez sur next.
 
+5. Ajoutez les dépendances necessaires (***Java MongoDB Driver***) au fichier de configuration ***pom.xml***. Pour le faire, on ouvre
+
+d'abord ***pom.xml***, ensuite, on execute la commande suivante : 
+
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>mongodb.java</groupId>
+	<artifactId>MongoDBJava</artifactId>
+	<version>1.0.0</version>
+	<name>MongoDBJava</name>
+	<dependencies>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+	</dependencies>
+</project>
+```
 
  ### Connectez-vous au server MongoDB dans le terminal Windows or MacBook avant d'executer votre code Java ###
 
