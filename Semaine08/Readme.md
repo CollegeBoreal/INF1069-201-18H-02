@@ -31,11 +31,11 @@ Ouvrez d'abord Intellij IDEA
 
 4. Specifiez les 3 elements suivants :
 
-***GroupId*** - a package of a new project.
+   ***GroupId*** - a package of a new project.
 
-***ArtifactId*** - a name of your project.
+   ***ArtifactId*** - a name of your project.
 
-***Version*** - a version of a new project. By default, this field is specified automatically.
+   ***Version*** - a version of a new project. By default, this field is specified automatically.
 
 Ensuite, cliquez sur next.
 
@@ -48,10 +48,12 @@ d'abord ***pom.xml***, ensuite, on execute la commande suivante :
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<groupId>mongodb.java</groupId>
 	<artifactId>MongoDBJava</artifactId>
 	<version>1.0.0</version>
 	<name>MongoDBJava</name>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.mongodb</groupId>
@@ -59,9 +61,16 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<version>3.4.0</version>
 		</dependency>
 	</dependencies>
+	
 </project>
 ```
 
  ### Connectez-vous au server MongoDB dans le terminal Windows or MacBook avant d'executer votre code Java ###
 
-Enfin, cliquez sur .......
+Retournez dans Intellij IDEA pour creer un nouveau package ***Java*** appele ***semaine09**** et une nouvelle classe ***Java*** appelee 
+
+***MongoDBConnect***. Pour ce faire, on suit les etapes suivantes :
+
+1. Clique droit sur le nom du projet ***MongoDBJava***, ensuite ***New*** -> ***Package*** -> ***semaine09***.
+
+2. Clique droit sur le nom du projet ***MongoDBJava***, ensuite ***New Java Class *** -> ***MongoDBConnect***.
