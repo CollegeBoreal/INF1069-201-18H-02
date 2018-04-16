@@ -33,8 +33,12 @@ public class SolutionsSemaine02 {
         
           // Question 5
         //question5();
-        // Question 5
+        
+        // Question 6
         //question6();
+        
+        // Question 7
+        //question7();
     }
 
     /**
@@ -191,7 +195,6 @@ public class SolutionsSemaine02 {
             System.err.println(e.toString());
         }
     }
-}
 
 
 
@@ -221,4 +224,21 @@ public static void question6() {
             System.err.println(e.toString());
         }
     }
+    
+    
+    /*
+    public static void question7() {
+        Document query = null;
+        Document document = null;
+        MongoCollection collection = null;
+      
+
+        try {
+            
+        } catch(Exception e) {
+            // Print errors
+            System.err.println(e.toString());
+        }
+    } */
+    
 }
