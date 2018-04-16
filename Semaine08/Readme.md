@@ -27,7 +27,7 @@ Ouvrez d'abord Intellij IDEA
 
 2. Selectionnez ***Maven*** par les options se trouvant a gauche 
 
-3. Specifiez le projet SDK (JDK) en utilisant votre propre archetype. Pour nous, ca sera Java ***(Jar)***. Ensuite, cliquez sur next.
+3. Specifiez le projet SDK (JDK) en utilisant votre propre archetype. Pour nous, ca sera Java (***Jar***). Ensuite, cliquez sur next.
 
 4. Specifiez les 3 elements suivants :
 
