@@ -13,9 +13,10 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.UpdateOptions;
 import com.mongodb.client.result.UpdateResult;
+import com.mongodb.MongoException;
 
 
-public class MongoDBUpdateDocument {
+public class MongoDBUpdateDoc {
     public static void main(String[] args) {
         MongoClient mongoClient = null;
         MongoDatabase mongoDatabase = null;
@@ -26,26 +27,16 @@ public class MongoDBUpdateDocument {
         Iterator<String> iterator = null;
         Document catalog = null;
         String documentKey = null;
-        String server = null;
-        int port = 0;
-        String database = null;
+    
 
         try {
-            // Server name
-            server = "10.0.2.2";
-
-            // Port number
-            port = 27018;
-
-            // Database name
-            database = "semaine09";
-
+           
             // Connect to server
             mongoClient = new MongoClient(
-                            Arrays.asList(new ServerAddress(server, port)));
+                            Arrays.asList(new ServerAddress("127.0.01", 27017)));
 
             // Get the database
-            mongoDatabase = mongoClient.getDatabase(database);
+            mongoDatabase = mongoClient.getDatabase("semaine08");
 
             // Get the collection
             collection = mongoDatabase.getCollection("catalogUpdate");
@@ -120,12 +111,12 @@ public class MongoDBUpdateDocument {
                 }
                 System.out.println("\n------------------------------\n");
             }
-
-            // close the connection
-            mongoClient.close();
-        } catch(Exception e) {
-            // Print errors
-            System.err.println(e.toString());
+        } catch (MongoException e) {
+            e.printStackTrace();
+        } finally {
+            if(mongoClient!=null)
+                mongoClient.close();
         }
     }
+
 }
