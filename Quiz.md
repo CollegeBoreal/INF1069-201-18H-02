@@ -3,33 +3,36 @@
 Creer une base de donnees appelee ***quiz***
 
 1) Inserez le document suivant dans la collection ***quiz1***:
-
+```
 doc1={ "Nom": "Chris",
                      "Prenom": "Beauchamps", 
                      "Profession": "Footballeur",
                      "Age":26 
                      }
+ ```
                      
-2) Inserez simultanement les documents dans la collection quiz1
+2) Inserez simultanement les documents dans la collection ***quiz1***
 
+```
 document1={"Nom":"Blondy","Prénom":"Alpha","Album":"Rendez-vous"}
 document2={"Nom":"Marley","Prénom":"Bob","Status":"Mort","Album":"Live"}
+```
 
 3) Modifier l'album Rendez-vous de Alpha Blondy par un autre album
 
-4) Modifier les deux premiers champs du premier document de la collection quiz1
+4) Modifier les deux premiers champs du premier document de la collection ***quiz1***
 
 5) Que fait l'option ***multi*** dans update ?
 
 6) Quelle est la difference entre ***set*** et ***unset***
 
-7) Supprimer les deux premiers documents de la collection quiz1
+7) Supprimer les deux premiers documents de la collection ***quiz1***
 
-8) Supprimer tous les documents de la collection quiz1
+8) Supprimer tous les documents de la collection ***quiz1***
 
-9) Supprimer la collection quiz1
+9) Supprimer la collection ***quiz1***
 
-10) Supprimer la base de donnees quiz 
+10) Supprimer la base de donnees ***quiz***
 
 
 ### Fonctions de recherche Quiz ###
