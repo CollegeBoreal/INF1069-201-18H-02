@@ -23,15 +23,15 @@ Ceci etant, creons un projet Maven dans IntelliJ IDEA afin de faire du developpe
 
 Ouvrez d'abord Intellij IDEA 
 
-1. Cliquez sur ###Create New Project ### 
-2. Selectionnez ###Maven### par les options se trouvant a gauche 
+1. Cliquez sur ***Create New Project*** 
+2. Selectionnez ***Maven*** par les options se trouvant a gauche 
 3. Specifiez le projet SDK (JDK) en utilisant votre propre archetype. Pour nous, ca sera Java. Ensuite, cliquez sur next.
 4. Specifiez les 3 elements suivants :
-###GroupId### - a package of a new project.
-###ArtifactId### - a name of your project.
-###Version### - a version of a new project. By default, this field is specified automatically.
+***GroupId*** - a package of a new project.
+***ArtifactId*** - a name of your project.
+***Version*** - a version of a new project. By default, this field is specified automatically.
 Ensuite, cliquez sur next.
-5. 
+
 
  ### Connectez-vous au server MongoDB dans le terminal Windows or MacBook avant d'executer votre code Java ###
 
