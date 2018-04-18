@@ -39,6 +39,9 @@ public class SolutionsSemaine02 {
         
         // Question 7
         //question7();
+        
+        // Question 8
+        //question8();
     }
 
     /**
