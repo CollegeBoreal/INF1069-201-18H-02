@@ -47,4 +47,57 @@ Quelle est la population moyenne des villes par Etat (***state***) ?
 Quelles sont les villes (***city***) les plus peuplées et les moins peuplées dans chaque Etat (***state***) ?
 
 
+```
+function map(){
+emit({state:this.state},{min:{pop:this.pop,city:this.city},max:{pop:this.pop,city:this.city}});
+};
+
+function reduce(key, values){
+var resultat=values[0];
+for(var i=1;i<values.length;i++){
+if(values[i].min.pop<resultat.min.pop)
+resultat.min=values[i].min;
+if(values[i].max.pop>resultat.max.pop)
+resultat.max=values[i].max;
+}
+return resultat;
+};
+
+db.test.mapReduce(map,reduce,{out:"question3"});
+db.question3.find().pretty();
+
+ou 
+db.test.mapReduce(map,reduce,{out:{inline:true}}); 
+// Pour afficher en ligne de commande les sorties sans creer de output 
+
+```
+ou encore 
+
+```
+function map(){
+// on declare une variable m contenant la population et les villes pour alleger le code
+var m={pop:this.pop,city:this.city};
+// on desire comme output les Etats ainsi que les minimums et les maximums des populations des villes dans chaque Etat
+emit({state:this.state},{min:m,max:m});
+};
+
+function reduce(key, values){
+//on initialise la variable a la premiere valeur de values qui est la premiere population 
+var resultat=values[0];
+// ce bout de code retourne le minimum et le maximum des populations
+for(var i=1;i<values.length;i++){
+if(values[i].min.pop<resultat.min.pop)
+resultat.min=values[i].min;
+if(values[i].max.pop>resultat.max.pop)
+resultat.max=values[i].max;
+}
+return resultat;
+};
+
+db.test.mapReduce(map,reduce,{out:"question3"});
+db.question3.find().pretty();
+
+```
+
+
 
