@@ -75,7 +75,7 @@ public class project {
             // Affiche tous les documents
              FindIterable<Document> iterable = collection.find();
             for (Document document : iterable) {
-                 Set<String> keySet = document.keySet();
+                 keySet = document.keySet();
                  Iterator<String> iterator = keySet.iterator();
 
                 while (iterator.hasNext()) {
