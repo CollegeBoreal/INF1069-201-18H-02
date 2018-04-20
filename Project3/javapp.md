@@ -21,6 +21,4 @@ c) Supprimer tous les documents sans supprimer la collection.
 
 
 Referrez-vous au code Java qui se trouve dans le lien ci-dessous pour repondre aux questions ci-dessus :
-
-
-
+[Java Project](https://github.com/CollegeBoreal/INF1069-201-18H-02/blob/master/Project3/project.java)
