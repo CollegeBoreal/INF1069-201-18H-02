@@ -9,7 +9,6 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.result.UpdateResult;
 import com.mongodb.client.result.DeleteResult;
-import com.mongodb.MongoException;
 import org.bson.Document;
 
 public class project {
@@ -28,7 +27,7 @@ public class project {
         //exemple2();
 
         //  Exemple 3
-        //exemple3();
+       // exemple3();
 
     }
 
@@ -38,14 +37,14 @@ public class project {
     public static void connect() {
         try {
 
-            // To connect to MongDB server
+            // To connect to MongoDB server
             mongoClient = new MongoClient("localhost", 27017);
 
             // Now connect to your databases
             mongoDatabase = mongoClient.getDatabase("project");
 
             // Print message
-            System.out.println("Youpi : get connected to MongoDB");
+            System.out.println("Message : get successfully connected to MongoDB !");
 
             // close the connection
             //mongoClient.close();
@@ -55,94 +54,103 @@ public class project {
         }
     }
 
-// Ajoute le volleyball a tous les utilisateurs dont le pays est Canada 
+// Ajoute le volleyball a tous les utilisateurs dont le pays est Canada
 
     public static void exemple1() {
 
         try {
             // Get the collection
-           MongoCollection collection = mongoDatabase.getCollection("mycollection");
-             // Create query
-            query = new Document("Country", "Canada");
+            MongoCollection collection = mongoDatabase.getCollection("mycollection1");
+            // Create query
+            Document query = new Document("Country", "Canada");
 
             // Create update document
-            document = new Document();
-            document.append("$set",  new Document("Hobbies", new Document("sports","['soccer','boxing','volleyball']")));
-            
+            Document document = new Document();
+            document.append("$set", new Document("Hobbies",
+                    new Document("sports", "['soccer','basketball','volleyball']")
+                            .append("movies","['seven pounds','time out']")));
+
             //update document
             UpdateResult updateResult = collection.updateOne(query, document);
-            
+
             // Affiche tous les documents
-             FindIterable<Document> iterable = collection.find();
-            for (Document document : iterable) {
-                 keySet = document.keySet();
-                 Iterator<String> iterator = keySet.iterator();
+            FindIterable<Document> iterable = collection.find();
+            for (Document doc : iterable) {
+                keySet = doc.keySet();
+                Iterator<String> iterator = keySet.iterator();
 
                 while (iterator.hasNext()) {
-                   String documentKey = iterator.next();
-                    System.out.println(documentKey + ":\t" + document.get(documentKey));
+                    String documentKey = iterator.next();
+                    System.out.println(documentKey + ":\t" + doc.get(documentKey));
                 }
-            
+
+            }
         } catch(Exception e) {
-            // Print errors
-            System.err.println(e.toString());
+                // Print errors
+                System.err.println(e.toString());
+            }
         }
-    }
 
 
-    // Supprime tous les sports de pierre
+        // Supprime tous les sports de pierre
 
-    public static void exemple2() {
-        Document query = null;
-        Document document = null;
-        MongoCollection collection = null;
-        UpdateResult updateResult = null;
+        public static void exemple2() {
 
-        try {
-            collection = mongoDatabase.getCollection("mycollection");
+            try {
+                MongoCollection collection = mongoDatabase.getCollection("mycollection");
 
-            // Create query
-            query = new Document("username", "Pierre");
+                // Create query
+                Document query = new Document("Username", "Pierre");
 
-            // Create update document
-            document = new Document();
-            document.append("$unset",  new Document("Hobbies.sports", 1));
+                // Create update document
+                Document document = new Document();
+                document.append("$unset",  new Document("Hobbies.sports", " "));
 
-            // Update
-            UpdateResult updateResult = collection.updateOne(query, document);
+                // Update
+                UpdateResult updateResult = collection.updateOne(query, document);
 
-            // Print results
-            System.out.println("Update Result: \n" + updateResult.toString());
-        } catch(Exception e) {
-            // Print errors
-            System.err.println(e.toString());
+                // Print results
+
+                System.out.println("Update Result: \n" + updateResult.toString());
+
+                FindIterable<Document> iterable = collection.find();
+                for (Document doc : iterable) {
+                    keySet = doc.keySet();
+                    Iterator<String> iterator = keySet.iterator();
+
+                    while (iterator.hasNext()) {
+                        String documentKey = iterator.next();
+                        System.out.println(documentKey + ":\t" + doc.get(documentKey));
+                    }
+
+                }
+            } catch(Exception e) {
+                // Print errors
+                System.err.println(e.toString());
+            }
         }
-    }
 
 
-// Supprime tous les documents d'une collection 
+// Supprime tous les documents d'une collection
 
 
-public static void exemple3() {
-        Document query = null;
-        Document document = null;
-        MongoCollection collection = null;
+        public static void exemple3() {
 
-        try {
-            collection = mongoDatabase.getCollection("mycollection");
+            try {
+                MongoCollection collection = mongoDatabase.getCollection("mycollection");
 
-           // Delete many documents
-           DeleteResult deleteDoc = collection.deleteMany(new Document());
+                // Delete many documents
+                DeleteResult deleteDoc = collection.deleteMany(new Document());
 
-            // Print Number of documents deleted 
-            System.out.println("Number of documents deleted: "+ deleteDoc.getDeletedCount());
-            
-        } catch(Exception e) {
-            // Print errors
-            System.err.println(e.toString());
+                // Print Number of documents deleted
+                System.out.println("Number of documents deleted: "+ deleteDoc.getDeletedCount());
+
+            } catch(Exception e) {
+                // Print errors
+                System.err.println(e.toString());
+            }
         }
-    }
 
-   
-    
-}
+
+
+    }
