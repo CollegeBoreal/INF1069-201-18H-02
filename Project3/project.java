@@ -137,8 +137,6 @@ public static void exemple3() {
             // Print Number of documents deleted 
             System.out.println("Number of documents deleted: "+ deleteDoc.getDeletedCount());
             
-            
-            
         } catch(Exception e) {
             // Print errors
             System.err.println(e.toString());
