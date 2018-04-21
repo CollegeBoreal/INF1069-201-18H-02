@@ -61,7 +61,7 @@ public class project {
 
         try {
             // Get the collection
-           MongoCollection collection = mongoDatabase.getCollection("project03");
+           MongoCollection collection = mongoDatabase.getCollection("mycollection");
              // Create query
             query = new Document("Country", "Canada");
 
@@ -99,7 +99,7 @@ public class project {
         UpdateResult updateResult = null;
 
         try {
-            collection = mongoDatabase.getCollection("project03");
+            collection = mongoDatabase.getCollection("mycollection");
 
             // Create query
             query = new Document("username", "Pierre");
@@ -129,7 +129,7 @@ public static void exemple3() {
         MongoCollection collection = null;
 
         try {
-            collection = mongoDatabase.getCollection("project03");
+            collection = mongoDatabase.getCollection("mycollection");
 
            // Delete many documents
            DeleteResult deleteDoc = collection.deleteMany(new Document());
