@@ -37,11 +37,6 @@ public class SolutionsSemaine02 {
         // Question 6
         //question6();
         
-        // Question 7
-        //question7();
-        
-        // Question 8
-        //question8();
     }
 
     /**
@@ -229,19 +224,6 @@ public static void question6() {
     }
     
     
-    /*
-    public static void question7() {
-        Document query = null;
-        Document document = null;
-        MongoCollection collection = null;
-      
 
-        try {
-            
-        } catch(Exception e) {
-            // Print errors
-            System.err.println(e.toString());
-        }
-    } */
     
 }
