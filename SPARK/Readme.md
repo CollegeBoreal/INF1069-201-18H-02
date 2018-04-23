@@ -77,7 +77,7 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
 7) Appuyez sur ***Run*** et plusieurs fichiers seront crees comme resultats de la compilation.
 
 
-https://stackoverflow.com/questions/46009602/running-a-spark-word-count-in-intellij
+
 
 
 
