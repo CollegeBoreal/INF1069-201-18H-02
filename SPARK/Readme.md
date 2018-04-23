@@ -1,6 +1,9 @@
 ### SPARK ###
 
-Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*** en utilisant ***IntelliJ***. 
+Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*** en utilisant ***IntelliJ***, qui permet 
+de compter le nombre d'occurences de mots dans un document. Nous la nommera ***Wordcount***.
+
+Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Spark*** pour ecrire les programmes ***Scala*** . 
 
 1) Ouvrez et creez un nouveau projet avec ***IntelliJ*** (***File -> New Project***)
 
@@ -9,10 +12,13 @@ Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*
 3) Remplissez les champs suivants : 
 
    ***GroupId: com.collegeboreal***
+   
    ***ArtifactId: FirstsparkExample***
  
-4) Dans le fichier ***pom.xml***, ajoutons les dependencies de ***Spark*** and ***Scala*** afin d'importer leurs packages dans le bon 
-   fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Nous avons sur le site de apache Spark pour telecharger les dependencies : https://mvnrepository.com/artifact/org.apache.spark.
+4) L'etape de configuration : 
+
+   Dans le fichier ***pom.xml***, ajoutons les dependencies de ***Spark*** et ***Scala*** afin d'importer leurs packages pour le bon 
+   fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Nous avons sur le site de apache Spark pour telecharger les dependencies :    https://mvnrepository.com/artifact/org.apache.spark.
    
   ```
   <dependencies>
@@ -35,5 +41,10 @@ Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*
 
   ```
    
-   
+ L'etape de configuration etant terminee, creons le code ***Scala*** :
+ 
+5)  Clique-droit sur ***FirstsparkExample***, selectionnez ***Scala class*** (changez ***kind*** en ***Object***) et ***Name -> WordCount***. Cliquez sur ***OK*** 
+
+6) 
+
    
