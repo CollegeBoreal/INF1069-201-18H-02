@@ -12,20 +12,17 @@ Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*
    ***ArtifactId: FirstsparkExample***
  
 4) Dans le fichier ***pom.xml***, ajoutons les dependencies de ***Spark*** and ***Scala*** afin d'importer leurs packages dans le bon 
-   fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Nous avons sur le site de apache Spark pour telecharger les dependencies : https://mvnrepository.com/artifact/org.apache.spark 
+   fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Nous avons sur le site de apache Spark pour telecharger les dependencies : https://mvnrepository.com/artifact/org.apache.spark.
    
-   ```
+  ```
   <dependencies>
-  
-  //Dependencies of Scala
+
   
    <dependency>
   <groupId>org.scala-tools</groupId>
   <artifactId>maven-scala-plugin</artifactId>
   <version>2.11</version>
 </dependency>
-
-//Dependencies of Spark
 
 <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
 <dependency>
@@ -36,7 +33,7 @@ Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*
 
 </dependencies>
 
-   ```
+  ```
    
    
    
