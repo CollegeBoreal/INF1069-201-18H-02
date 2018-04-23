@@ -15,8 +15,6 @@ Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*
    fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Nous avons sur le site de apache Spark pour telecharger les dependencies : https://mvnrepository.com/artifact/org.apache.spark 
    
    ```
- 
-  
   <dependencies>
   
   //Dependencies of Scala
@@ -36,10 +34,7 @@ Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*
     <version>2.3.0</version>
 </dependency>
 
-
 </dependencies>
-
-
 
    ```
    
