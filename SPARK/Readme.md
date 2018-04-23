@@ -27,7 +27,7 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
    <dependency>
   <groupId>org.scala-tools</groupId>
   <artifactId>maven-scala-plugin</artifactId>
-  <version>2.11</version>
+  <version>2.11.8</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
@@ -41,10 +41,45 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
 
   ```
    
- L'etape de configuration etant terminee, creons le code ***Scala*** :
+    L'etape de configuration etant terminee, creons le code ***Scala*** :
  
-5)  Clique-droit sur ***FirstsparkExample***, selectionnez ***Scala class*** (changez ***kind*** en ***Object***) et ***Name -> WordCount***. Cliquez sur ***OK*** 
+5)  Clique-droit sur ***FirstsparkExample***, selectionnez ***Scala class*** (changez ***kind*** en ***Object***) et   
+    
+    ***Name ->   WordCount***. 
 
-6) 
+    Cliquez sur ***OK*** 
+
+6)  Copiez ce code dans la fenetre ***WordCount*** : 
+
+   ```
+   package com.myCompany.scala
+   
+   import org.apache.spark.SparkContext
+   import org.apache.spark.SparkConf
+   
+   object WordCount {
+  def main(args: Array[String]) {
+    val conf = new SparkConf()
+      .setMaster("local")
+      .setAppName("Word Count")
+      .setSparkHome("src/main/resources")
+    val sc = new SparkContext(conf)
+    val input = sc.textFile("src/main/resources/input.txt")
+    val count = input.flatMap(line ⇒ line.split(" "))
+      .map(word ⇒ (word, 1))
+      .reduceByKey(_ + _)
+    count.saveAsTextFile("src/main/resources/outfile")
+    println("OK")
+  }
+}
+   
+   ```
+7) Appuyez sur ***Run*** et plusieurs fichiers seront crees comme resultats de la compilation.
+
+
+https://stackoverflow.com/questions/46009602/running-a-spark-word-count-in-intellij
+
+
+
 
    
