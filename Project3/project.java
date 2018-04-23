@@ -60,7 +60,7 @@ public class project {
 
         try {
             // Get the collection
-            MongoCollection collection = mongoDatabase.getCollection("mycollection1");
+            MongoCollection collection = mongoDatabase.getCollection("mycollection");
             // Create query
             Document query = new Document("Country", "Canada");
 
