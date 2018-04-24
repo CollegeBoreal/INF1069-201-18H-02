@@ -50,7 +50,7 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
 
     Cliquez sur ***OK*** 
 
-6)  Copiez ce code dans la fenetre ***WordCount*** : 
+6)  Copiez et collez ce code dans la fenetre ***WordCount*** : 
 
    ```
    package com.myCompany.scala
