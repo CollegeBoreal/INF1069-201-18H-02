@@ -1,4 +1,4 @@
-### SPARK ###
+### SPARK SCala with Maven ###
 
 Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*** en utilisant ***IntelliJ***, qui permet 
 de compter le nombre d'occurences de mots dans un document. Nous la nommera ***Wordcount***.
@@ -75,6 +75,10 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
    
    ```
 7) Appuyez sur ***Run*** et plusieurs fichiers seront crees comme resultats de la compilation.
+
+https://vinta.ws/code/setup-spark-scala-and-maven-with-intellij-idea.html
+
+
 
 
 
