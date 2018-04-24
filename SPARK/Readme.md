@@ -19,7 +19,6 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
 
    Dans le fichier ***pom.xml***, ajoutons les dependencies de ***Spark*** et ***Scala*** afin d'importer leurs packages pour le bon 
    fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Nous avons sur le site de apache Spark pour telecharger les dependencies :
-   
    https://mvnrepository.com/artifact/org.apache.spark.
    
   ```
