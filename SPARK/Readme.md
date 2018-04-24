@@ -1,4 +1,4 @@
-### SPARK SCala with Maven ###
+### SPARK Scala with Maven ###
 
 Dans cette section, nous allons creer une application ***Spark*** avec ***Scala*** en utilisant ***IntelliJ***, qui permet 
 de compter le nombre d'occurences de mots dans un document. Nous la nommera ***Wordcount***.
@@ -18,7 +18,9 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
 4) L'etape de configuration : 
 
    Dans le fichier ***pom.xml***, ajoutons les dependencies de ***Spark*** et ***Scala*** afin d'importer leurs packages pour le bon 
-   fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Nous avons sur le site de apache Spark pour telecharger les dependencies :    https://mvnrepository.com/artifact/org.apache.spark.
+   fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Nous avons sur le site de apache Spark pour telecharger les dependencies :
+   
+   https://mvnrepository.com/artifact/org.apache.spark.
    
   ```
   <dependencies>
