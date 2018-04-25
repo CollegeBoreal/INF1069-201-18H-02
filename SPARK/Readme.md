@@ -63,13 +63,12 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
     val conf = new SparkConf()
       .setMaster("local")
       .setAppName("Word Count")
-      .setSparkHome("src/main/resources")
     val sc = new SparkContext(conf)
-    val input = sc.textFile("src/main/resources/input.txt")
+    val input = sc.textFile("file:///home/chemin/collegeboreal/data.txt")
     val count = input.flatMap(line ⇒ line.split(" "))
       .map(word ⇒ (word, 1))
       .reduceByKey(_ + _)
-    count.saveAsTextFile("src/main/resources/outfile")
+    count.saveAsTextFile("file:///home/chemin/collegeboreal/sortiespark")
     println("OK")
   }
 }
