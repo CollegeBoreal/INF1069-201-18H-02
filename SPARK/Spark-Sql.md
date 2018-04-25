@@ -6,7 +6,7 @@ https://spark.apache.org/docs/latest/sql-programming-guide.html
 
 https://www.tutorialspoint.com/spark_sql/spark_sql_dataframes.htm
 
-Considerons l'example de Employee.json pour la pratique de Spark Sql
+Considerons l'example de ***Employee.json*** pour la pratique de Spark Sql
 
 ```
 {
