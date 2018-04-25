@@ -77,7 +77,6 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
    ```
 7) Appuyez sur ***Run*** et plusieurs fichiers seront crees comme resultats de la compilation.
 
-https://vinta.ws/code/setup-spark-scala-and-maven-with-intellij-idea.html
 
 
 
