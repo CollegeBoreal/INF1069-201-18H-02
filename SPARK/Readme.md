@@ -71,7 +71,7 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
     val count = input.flatMap(line ⇒ line.split(" "))
       .map(word ⇒ (word, 1))
       .reduceByKey(_ + _)
-      
+    //count.foreach(println) 
     count.saveAsTextFile("C:\\Users\\collegeboreal\\Desktop\\sortiespark")
     
   }
