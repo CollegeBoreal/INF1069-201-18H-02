@@ -5,6 +5,12 @@ https://spark.apache.org/docs/latest/sql-programming-guide.html
 
 https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/sql/RDDRelation.scala
 
+https://www.youtube.com/watch?v=GSuLt5PT_Dc
+
+https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/sql/SparkSQLExample.scala
+
+
+
 Considerons l'example de ***Employee.json*** pour la pratique de Spark Sql
 
 ```
