@@ -79,9 +79,27 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
 
 
 
+### Spark Scala with Sbt ###
 
+1) Ouvrez et creez un nouveau projet avec ***IntelliJ*** (***File -> New Project***)
 
+2) Cliquez sur ***Scala*** dans le menu de gauche et selectionnez ***sbt*** .
 
+3) Suivez les instructions et remplissez les champs requis tout en verifiant les compatibilites entre les versions de ***Sbt***, 
+
+***Scala*** et ***Spark*** .
+ 
+ 4)  Clique-droit sur ***FirstsparkExample***, selectionnez ***Scala class*** (changez ***kind*** en ***Object***) et   
+    
+  ***Name ->   WordCount***. 
+
+   Cliquez sur ***OK*** 
+    
+ 5 ) L'etape de configuration : 
+
+   Dans le fichier ***build.sbt***, ajoutons les dependencies de ***Spark***  afin d'importer ses packages pour le bon 
+   fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Le site nous permet de telecharger et ajouter les dependencies de apache  
+   spark dans ***build.sbt*** :  https://mvnrepository.com/artifact/org.apache.spark.
 
 
 
