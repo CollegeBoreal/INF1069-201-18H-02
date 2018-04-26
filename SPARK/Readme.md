@@ -85,7 +85,7 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
 
 2) Cliquez sur ***Scala*** dans le menu de gauche et selectionnez ***sbt*** .
 
-3) Suivez les instructions et remplissez les champs requis tout en verifiant les compatibilites entre les versions de ***Sbt***, 
+3) Suivez les instructions et remplissez les champs requis (***Name : FirstsparkExample***, etc ) tout en verifiant les compatibilites entre les versions de ***Sbt***, 
 
 ***Scala*** et ***Spark*** .
  
@@ -101,7 +101,41 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
    fonctionnement des codes ***Scala*** dans ***IntelliJ*** . Le site nous permet de telecharger et ajouter les dependencies de apache  
    spark dans ***build.sbt*** :  https://mvnrepository.com/artifact/org.apache.spark.
 
+  ```
+name := "FirstsparkExample"
 
+version := "1.0"
+
+scalaVersion := "2.11.11"
+  
+  // https://mvnrepository.com/artifact/org.apache.spark/spark-core
+libraryDependencies += "org.apache.spark" %% "spark-core" % "2.3.0"
+
+
+  ```
+  
+  6)  Copiez et collez ce code dans la fenetre ***WordCount*** :
+  
+  ```
+  import org.apache.spark.SparkContext
+  import org.apache.spark.SparkConf
+   
+  object WordCount {
+  def main(args: Array[String]) {
+    val conf = new SparkConf()
+      .setMaster("local")
+      .setAppName("Word Count")
+    val sc = new SparkContext(conf)
+    val inputFile = sc.textFile("C:\\Users\\collegeboreal\\Desktop\\filename.txt")
+    val count = input.flatMap(line ⇒ line.split(" "))
+      .map(word ⇒ (word, 1))
+      .reduceByKey(_ + _)
+    count.foreach(println)
+   
+  }
+}
+   ```
+7) Appuyez sur ***Run*** 
 
 
    
