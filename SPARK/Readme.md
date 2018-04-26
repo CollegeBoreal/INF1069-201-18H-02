@@ -63,14 +63,17 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
     val conf = new SparkConf()
       .setMaster("local")
       .setAppName("Word Count")
+      
     val sc = new SparkContext(conf)
+    
     val inputFile = sc.textFile("C:\\Users\\collegeboreal\\Desktop\\filename.txt")
-    //val inputFile = sc.textFile("C:/Users/collegeboreal/Desktop/todolist")
+    
     val count = input.flatMap(line ⇒ line.split(" "))
       .map(word ⇒ (word, 1))
       .reduceByKey(_ + _)
+      
     count.saveAsTextFile("C:\\Users\\collegeboreal\\Desktop\\sortiespark")
-    println("OK")
+    
   }
 }
    
@@ -89,7 +92,7 @@ Pour se faire, creons un nouveau projet et configurons ***IntelliJ*** avec ***Sp
    entre les versions de ***Sbt***, ***Scala*** et ***Spark*** .
  
  4) Clique-droit sur ***FirstsparkExample***, selectionnez ***Scala class*** (changez ***kind*** en ***Object***) et   
-      ***Name ->   WordCount***. 
+    ***Name ->   WordCount***. 
     Cliquez sur ***OK*** 
     
  5 ) L'etape de configuration : 
@@ -117,16 +120,24 @@ libraryDependencies += "org.apache.spark" %% "spark-core" % "2.3.0"
   import org.apache.spark.SparkContext
   import org.apache.spark.SparkConf
    
+   // Object returne le nombre d'occurences de mots dans un texte i.e. le nombre de fois que les mots se repetent
+   
   object WordCount {
   def main(args: Array[String]) {
     val conf = new SparkConf()
       .setMaster("local")
       .setAppName("Word Count")
+      
     val sc = new SparkContext(conf)
+    
+    //filename est le fichier texte qu'on veut lire 
+    
     val inputFile = sc.textFile("C:\\Users\\collegeboreal\\Desktop\\filename.txt")
+    
     val count = input.flatMap(line ⇒ line.split(" "))
       .map(word ⇒ (word, 1))
       .reduceByKey(_ + _)
+      
     count.foreach(println)
    
   }
