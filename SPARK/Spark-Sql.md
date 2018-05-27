@@ -36,12 +36,20 @@ object SparkSQLRunner {
     val df = spark.read.json("C:/spark/examples/src/main/resources/people.json")
     //Display the content of the DataFrame 
     df.show()
+    
     //Display only the "name" column
     df.select("name").show()
+    
     //Select and display both columns "name" and "age"
     df.select($"name", $"age").show()
+    
+    //Select everybody's name and increment their age by 1
     df.select($"name", $"age" + 1).show()
+    
+    // Select and display people older than 21
     df.filter($"age" > 21).show()
+    
+    // Count and display people by age 
     df.groupBy("age").count().show()
 
     // Example of SQL
@@ -58,7 +66,5 @@ object SparkSQLRunner {
 ```
 
 https://spark.apache.org/docs/latest/sql-programming-guide.html
-
-https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/sql/SparkSQLExample.scala
 
 
