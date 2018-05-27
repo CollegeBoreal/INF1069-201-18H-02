@@ -1,7 +1,7 @@
 
 ### Spark SQL ###
 
-Apres avoir configure ***Spark*** et ***Scala***, et toutes leurs ***dependencies*** sur ****IntelliJ***, on illustre un example d'une application de ***Spark SQL***.
+Apres avoir configure ***Spark*** et ***Scala***, et toutes leurs ***dependencies*** sur ***IntelliJ***, illustrons un example d' application de ***Spark SQL***.
 
 Considerons l'example de ***Employees.json*** pour la pratique de ***Spark Sql***
 
@@ -21,6 +21,7 @@ On execute ce code dans ***IntelliJ*** :
 ```
 
 import org.apache.spark.sql.SparkSession
+
 object SparkSQLRunner {
   def main(args: Array[String]) {
     // setup SparkSession instance
@@ -33,7 +34,7 @@ object SparkSQLRunner {
     import spark.implicits._
 
     // Read json file
-    val df = spark.read.json("C:/spark/examples/src/main/resources/people.json")
+    val df = spark.read.json("C:/spark/examples/src/main/resources/Employees.json")
     //Display the content of the DataFrame 
     df.show()
     
@@ -54,9 +55,9 @@ object SparkSQLRunner {
 
     // Example of SQL
     // Register the DataFrame as a SQL temporary view
-    df.createOrReplaceTempView("people")
+    df.createOrReplaceTempView("employees")
 
-    val sqlDF = spark.sql("SELECT * FROM people")
+    val sqlDF = spark.sql("SELECT * FROM employees")
     sqlDF.show()
 
 
